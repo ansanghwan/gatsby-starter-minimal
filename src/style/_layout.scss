@@ -1,0 +1,125 @@
+$header-height: 56px;
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+#___gatsby {
+  height: 100%;
+  overflow: auto;
+}
+
+header {
+  height: $header-height;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // z-index: 100;
+  background: #ffffff;
+  width: 100%;
+  border-bottom: 4px solid #f6fafd;
+  .header-inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 12px;
+  }
+  .header-left,
+  .header-right {
+    height: 2rem;
+  }
+  .header-left {
+    margin-right: auto;
+    a {
+      display: inline-block;
+      position: relative;
+      font-size: 22px;
+      height: 100%;
+      svg {
+        width: 2rem;
+        height: 100%;
+      }
+    }
+  }
+  .header-right {
+    margin-left: auto;
+    a {
+      font-size: 1.25rem;
+    }
+  }
+  .ico-home {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+    background: url(../images/bg_home.jpg) no-repeat 50% 50% / cover;
+  }
+}
+
+.header-nav {
+  .header-nav__ul {
+    text-align: right;
+    margin-bottom: 0;
+  }
+  .header-nav__item:not(:first-child) {
+    margin-left: 20px;
+  }
+  .header-nav__item {
+    display: inline-block;
+    color: #2d0554;
+    margin-top: 0;
+    a {
+      color: inherit;
+      font-size: 1.2rem;
+      letter-spacing: -1px;
+      font-weight: 700;
+      &.active {
+        color: tomato;
+      }
+    }
+  }
+}
+
+header + .container {
+  padding-top: $header-height;
+  padding-bottom: 2rem;
+}
+.container {
+  margin: auto;
+  max-width: 720px;
+  @media (min-width: $breakpoint-md) {
+    font-size: 1.25rem;
+  }
+}
+.container__tit {
+  font-size: 2rem;
+  padding: 1rem 2rem 1rem 1rem;
+  margin-bottom: 0;
+  word-break: keep-all;
+  letter-spacing: -1px;
+  font-weight: 900;
+  > span {
+    display: block;
+  }
+}
+.site-title {
+  font-size: 3rem;
+  color: gray;
+  font-weight: 700;
+  margin: 3rem 0;
+}
+
+.badge-wrap {
+  padding: 0 1rem 1rem;
+}

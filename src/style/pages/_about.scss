@@ -1,0 +1,83 @@
+.container--about {
+  .container__main {
+    position: relative;
+    padding-bottom: 0.5rem;
+  }
+  .me-profile {
+    overflow: hidden;
+    padding: 1rem 0 3rem;
+    display: flex;
+    align-items: center;
+    @media (min-width: $breakpoint-md) {
+      .me-profile__right {
+        padding-left: 3rem;
+      }
+    }
+  }
+  .me-profile__img {
+    display: inline-block;
+    position: relative;
+    max-width: 180px;
+    border-radius: 100%;
+    overflow: hidden;
+    background: url(../images/bg_picture_me.jpg) 50% 50% / cover;
+    flex: 0 0 40%;
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+  }
+  .me-profile__right {
+    flex: 1 0 60%;
+    padding-left: 0.875rem;
+    color:#663399;
+    font-size: 0.9375rem;
+    letter-spacing: -1px;
+   > p:not(:first-child) {
+    margin-top: 0.25rem;
+   }
+    a {
+      font-size: 0.8125rem;
+      display: inline-block;
+      white-space: nowrap;
+    }
+  }
+  .me-profile__name {
+    color :#232323;
+    font-size: 1rem;
+  }
+  .me-profile__git {
+    a {
+      width: 78%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;  
+      vertical-align: middle;
+    }
+  }
+  .about-sec {
+    padding: 0.5rem 1rem 0;
+    font-weight: 300;
+    word-break: keep-all;
+    em {
+      font-style: normal;
+      font-weight: 500;
+      color: #0baa53;
+    }
+  }
+  .about-sec + .about-sec{
+    margin-top: 2rem;
+  }
+  .about-sec__tit {
+    margin-bottom: 2rem;
+    font-size: 1.875rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    color: #0b0a33;
+  }
+  .closing-ment {
+    padding-top: 0.5rem;
+    text-align: right;
+  }
+}
