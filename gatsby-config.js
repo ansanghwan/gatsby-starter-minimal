@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "My portfolio",
+    title: "ASH",
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -18,5 +18,22 @@ module.exports = {
     },
     "gatsby-plugin-mdx",
     "gatsby-transformer-sharp",
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: "Roboto",
+              variants: ["300", "400", "500", "700"],
+            },
+            {
+              family: "Open Sans Condensed",
+              variants: ["300", "700"],
+            },
+          ],
+        },
+      },
+    },
   ],
 };
