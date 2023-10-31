@@ -7,25 +7,38 @@ import Seo from "../../components/seo";
 
 const BlogPage = ({ data }) => {
   return (
-    <Layout pageTitle="My Blog Posts">
-      {data.allMdx.nodes.map((node) => (
-        <article key={node.id}>
-          <div>
-            <GatsbyImage image={getImage(node.frontmatter.hero_image)} alt="" />
-          </div>
-          <h2>
-            <Link to={`/project-blog/${node.frontmatter.slug}`}>
-              {node.frontmatter.title}
+    <Layout
+      pageTitle="Project Posts"
+      pageClassName="sanghwan-portfolio--project"
+    >
+      <ul className="project-list">
+        {data.allMdx.nodes.map((node) => (
+          <li key={node.id} className="project-list__item">
+            <Link
+              to={`/project-blog/${node.frontmatter.slug}`}
+              className="project-list__link"
+            >
+              <span className="project-list__thumbnail">
+                <GatsbyImage
+                  image={getImage(node.frontmatter.hero_image)}
+                  alt=""
+                />
+              </span>
+              <div className="project-list__conts">
+                <p className="project-list__label">{node.frontmatter.title}</p>
+                <p className="project-list__date">
+                  {/* <span className="project-list__conts__tit">기간:</span>{" "} */}
+                  {node.frontmatter.date} - {node.frontmatter.enddate}
+                </p>
+                <p className="project-list__skill">
+                  <span className="project-list__conts__tit">skill:</span>{" "}
+                  {node.frontmatter.skill}
+                </p>
+              </div>
             </Link>
-          </h2>
-          <p>
-            <strong>Posted:</strong> {node.frontmatter.date}
-          </p>
-          <p>
-            <strong>skill:</strong> {node.frontmatter.skill}
-          </p>
-        </article>
-      ))}
+          </li>
+        ))}
+      </ul>
     </Layout>
   );
 };
@@ -35,7 +48,8 @@ export const query = graphql`
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
-          date(formatString: "MMMM D, YYYY")
+          date(formatString: "YYYY/MM/DD")
+          enddate(formatString: "YYYY/MM/DD")
           hero_image {
             childImageSharp {
               gatsbyImageData

@@ -84,6 +84,11 @@ body {
 }
 .sanghwan-portfolio-body {
 }
+.page-title {
+  margin-bottom: 36px;
+  font-size: calc(32px + (48 - 32) * ((100vw - 280px) / (575 - 280)));
+  line-height: normal;
+}
 .sanghwan-portfolio-body__inner {
   position: relative;
   max-width: 1400px;
@@ -94,30 +99,21 @@ body {
     display: none;
   }
 }
-
-.container__tit {
-  font-size: 2rem;
-  padding: 1rem 2rem 1rem 1rem;
-  margin-bottom: 0;
-  word-break: keep-all;
-  letter-spacing: -1px;
-  font-weight: 900;
-  > span {
-    display: block;
+.badge-wrap {
+  position: relative;
+}
+@media (min-width: $breakpoint-sm) {
+  .sanghwan-portfolio-body__inner {
+    padding-top: 120px;
+  }
+  .page-title {
+    margin-bottom: 66px;
   }
 }
-.site-title {
-  font-size: 3rem;
-  color: gray;
-  font-weight: 700;
-  margin: 3rem 0;
-}
-
-.badge-wrap {
-  padding: 0 1rem 1rem;
-}
-
 @media (min-width: $breakpoint-md) {
+  .page-title {
+    margin-bottom: 96px;
+  }
   .sanghwan-portfolio-header__left {
     > a {
       padding: 20px 0;

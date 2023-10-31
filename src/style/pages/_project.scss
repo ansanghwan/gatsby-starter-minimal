@@ -1,16 +1,32 @@
-.container--project {
+.sanghwan-portfolio--mdx {
+  .badge-wrap {
+    padding: 10px 0;
+  }
+  ul {
+    padding-left: 20px;
+    // list-style-type: none;
+  }
   blockquote {
+    background: #041529;
+    border-left: 0.5rem solid #0e2e54;
     em {
-      color : #1250e3;
+      color: #959fb5;
     }
-    small{
+    small {
       padding-left: 10px;
       font-size: 12px;
     }
     margin-top: 10px;
+    a {
+      display: inline-block;
+      padding: 6px 6px 6px 0;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
   em {
-    color : #e31223;
+    color: tan;
   }
   small {
     position: relative;
@@ -24,114 +40,97 @@
       left: 0;
       content: "\022C7";
     }
-
   }
-  .blog-main {
+}
+@media (min-width: $breakpoint-md) {
+  .project-detail {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+  }
+  .project-detail__img {
+    position: relative;
+    padding-top: 16px;
+    width: 45%;
+    max-width: 510px;
+    > .gatsby-image-wrapper {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  }
+  .project-detail__cont {
+    flex: 1;
+    padding-left: 48px;
+  }
+
+  .sanghwan-portfolio--mdx {
     h2 {
-      padding: 0 1rem;
-      font-size: 1.4rem;
-      margin-bottom: 0.7rem;
-      color: #333;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+    .badge-wrap {
+      margin-bottom: 14px;
+      .badge {
+        margin: 0 7px;
+      }
+    }
+    .badge {
+      font-size: 16px;
+      padding: 10px;
+    }
+  }
+}
+@media (min-width: $breakpoint-lg) {
+  .project-detail__img {
+    max-width: 540px;
+  }
+  .project-detail__cont {
+    padding-left: 56px;
+  }
+  blockquote {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  blockquote + blockquote {
+    margin-top: 1.4rem;
+  }
+
+  .sanghwan-portfolio--mdx {
+    .badge-wrap {
+      margin-bottom: 56px;
+    }
+    h2 {
+      font-size: 38px;
+      margin-bottom: 40px;
+    }
+    .project-detail__cont {
+      > ul {
+        padding-left: 0;
+        list-style-type: none;
+        > li {
+          position: relative;
+          padding-left: 26px;
+          font-size: 20px;
+          word-break: keep-all;
+          &:after {
+            content: "";
+            position: absolute;
+            top: 16px;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 100%;
+          }
+        }
+      }
     }
     h3 {
-      font-size: 1.1rem;
-      color: #333;
+      font-size: 30px;
     }
-    > p {
-      padding: 0 1rem;
-    }
-   
-    > ul,
-    > ol { 
-      margin-left: 1rem;
-      margin-right: 1em;
-      >li {
-        word-break: keep-all;
-        &:not(first-child){
-          margin-top: 1rem;
-        }
-      }
-      ul,
-      ol {
-        >li {
-          &:not(first-child){
-            margin-top: 0.625rem;
-          }
-          margin-top: 0.625rem;
-        }
-        margin-left: -1.25rem;
-        padding: 0 0 0 1.25rem;
-        
-      }
-      
-    }
-    ul,
-    ol {
-      em {
-        font-style: normal;
-      }
-    }
-   
-  
-    .gatsby-image-wrapper-constrained {
-      display: block;
-      position: relative;
-      padding-top: 42%;
-      overflow: hidden;
-      >div {
-        max-width: none!important;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      picture {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      @media (min-width: $breakpoint-md) {
-        padding-top: 200px;
-        margin-bottom: 40px;
-         img {
-          object-fit: contain;
-        }
-      }
-    }
-
-  }
-  .blog-main__header {
-    position: relative;
-    h1 {
-      padding: 1.5rem 1rem 0;
-      margin-bottom: 1rem;
-      font-size: 1.7rem;
-      font-weight: 700;
-      word-break: keep-all;
-    }
-    .gatsby-image-wrapper img {
-      height: auto;
-    }
-  }
-  @media (min-width: $breakpoint-lg) {
-    blockquote {
-     font-size: 1rem;
-     margin-top: 1rem;
-    }
-    blockquote + blockquote {
-      margin-top: 1.4rem;
-    } 
-
-    .blog-main  {
-      @media (min-width: $breakpoint-lg) {
-        ul>li:not(:first-child),
-        ol>li:not(:first-child) {
-          margin-top: 2rem;
-        }
-      }
+    ul > li:not(:first-child),
+    ol > li:not(:first-child) {
+      margin-top: 2rem;
     }
   }
 }

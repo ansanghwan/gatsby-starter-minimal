@@ -3,36 +3,36 @@ import Layout from "../components/layout";
 
 const AboutPage = () => {
   return (
-    <Layout pageTitle="About Me">
+    <Layout pageTitle="About Me" pageClassName="sanghwan-portfolio--about">
       <section className="about-sec about-sec--top">
         <div className="me-profile">
-          <span className="me-profile__img"></span>
+          {/* <span className="me-profile__img"></span> */}
           <div className="me-profile__right">
             <p className="me-profile__name">
               {" "}
-              <strong>SangHwan AN</strong>{" "}
+              <strong>안상환</strong>{" "}
             </p>
             <p>
-              <strong>기술 Blog</strong> :{" "}
-              <a href="https://sh-sida.tistory.com/">
+              <strong>Blog</strong> :{" "}
+              <a href="https://sh-sida.tistory.com/" target="_blank">
                 https://sh-sida.tistory.com/
               </a>
             </p>
             <p className="me-profile__git">
               <strong>git</strong> :{" "}
-              <a href="https://github.com/ansanghwan">
-                https://github.com/ansanghwan
+              <a href="https://github.com/sanghwanAN" target="_blank">
+                https://github.com/sanghwanAN
               </a>
             </p>
           </div>
         </div>
         <h3 className="about-sec__tit">산전 수전 공중전</h3>
         안녕하세요, <br />
-        <em>현재는 프리랜서</em> 웹 퍼블리셔 <em>안상환</em> 입니다. 5년 간의
-        부사관(병 생활 포함) 복무 하고 전역 후에 직업 전문 학교에서 웹 퍼블리셔
-        교육을 받고 지금 까지 개인 공부를 게을리 하지 않으며 어려운 일, 남들이
-        가지 않는 프로젝트 등 가리지 않고, 책임감 있게 프로젝트들을 수행 하며
-        여기까지 성장 해 왔습니다. <br /> <br />
+        <em>현재는 프리랜서</em> 웹 퍼블리셔 <em>안상환</em> 입니다.
+        <br /> 5년 간의 부사관(병 생활 포함) 복무 하고 전역 후에 직업 전문
+        학교에서 웹 퍼블리셔 교육을 받고 지금 까지 개인 공부를 게을리 하지
+        않으며 어려운 일, 남들이 가지 않는 프로젝트 등 가리지 않고, 책임감 있게
+        프로젝트들을 수행 하며 여기까지 성장 해 왔습니다. <br /> <br />
         프리랜서를 하면서 구인이 되지 않거나 퍼블리셔가 자주 교체 되는 프로젝트
         중간에 투입 되어 문제 해결사 역할을 주로 해왔습니다. <br /> <br />
         덕분에 예상하지 못한 문제 들을 많이 접했고, 그 문제들을 해결 해 나가면서

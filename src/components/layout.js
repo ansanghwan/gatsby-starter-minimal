@@ -39,7 +39,7 @@ const Layout = ({ pageTitle, children, pageClassName }) => {
 
       <div className="sanghwan-portfolio-body">
         <div className="sanghwan-portfolio-body__inner">
-          <h1>{pageTitle}</h1>
+          <h1 className="page-title">{pageTitle}</h1>
           {children}
         </div>
       </div>

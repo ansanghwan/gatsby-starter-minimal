@@ -1,8 +1,4 @@
-.container--about {
-  .container__main {
-    position: relative;
-    padding-bottom: 0.5rem;
-  }
+.sanghwan-portfolio--about {
   .me-profile {
     overflow: hidden;
     padding: 1rem 0 3rem;
@@ -10,7 +6,7 @@
     align-items: center;
     @media (min-width: $breakpoint-md) {
       .me-profile__right {
-        padding-left: 3rem;
+        // padding-left: 3rem;
       }
     }
   }
@@ -23,36 +19,36 @@
     background: url(../images/bg_picture_me.jpg) 50% 50% / cover;
     flex: 0 0 40%;
     &:after {
-      content: '';
+      content: "";
       display: block;
       padding-bottom: 100%;
     }
   }
   .me-profile__right {
     flex: 1 0 60%;
-    padding-left: 0.875rem;
-    color:#663399;
-    font-size: 0.9375rem;
+    padding-left: 0;
+    color: #0877b6;
+    // font-size: 0.9375rem;
     letter-spacing: -1px;
-   > p:not(:first-child) {
-    margin-top: 0.25rem;
-   }
+    > p:not(:first-child) {
+      margin-top: 0.25rem;
+    }
     a {
-      font-size: 0.8125rem;
+      font-size: inherit;
       display: inline-block;
       white-space: nowrap;
     }
   }
   .me-profile__name {
-    color :#232323;
-    font-size: 1rem;
+    color: #fff;
+    font-size: 18px;
   }
   .me-profile__git {
     a {
       width: 78%;
       white-space: nowrap;
       overflow: hidden;
-      text-overflow: ellipsis;  
+      text-overflow: ellipsis;
       vertical-align: middle;
     }
   }
@@ -60,13 +56,16 @@
     padding: 0.5rem 1rem 0;
     font-weight: 300;
     word-break: keep-all;
+    > ul {
+      margin-left: 20px;
+    }
     em {
       font-style: normal;
-      font-weight: 500;
-      color: #0baa53;
+      // font-weight: 500;
+      // color: #49659b;
     }
   }
-  .about-sec + .about-sec{
+  .about-sec + .about-sec {
     margin-top: 2rem;
   }
   .about-sec__tit {
@@ -74,10 +73,37 @@
     font-size: 1.875rem;
     font-weight: 700;
     letter-spacing: -1px;
-    color: #0b0a33;
+    color: #0877b6;
   }
   .closing-ment {
     padding-top: 0.5rem;
     text-align: right;
+  }
+}
+
+@media (min-width: $breakpoint-md) {
+  .sanghwan-portfolio--about {
+    .me-profile__name {
+      font-size: 40px;
+      margin-bottom: 30px;
+    }
+    .me-profile__right {
+      font-size: 22px;
+    }
+    .about-sec {
+      font-size: 18px;
+    }
+    .about-sec__tit {
+      font-size: 44px;
+      font-weight: bold;
+    }
+  }
+}
+@media (min-width: $breakpoint-lg) {
+  .sanghwan-portfolio--about {
+    .about-sec {
+      font-size: 23px;
+      line-height: 38px;
+    }
   }
 }
