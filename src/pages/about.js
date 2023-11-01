@@ -13,13 +13,13 @@ const AboutPage = () => {
               <strong>안상환</strong>{" "}
             </p>
             <p>
-              <strong>Blog</strong> :{" "}
+              <strong className="p-tit">Blog</strong> :{" "}
               <a href="https://sh-sida.tistory.com/" target="_blank">
                 https://sh-sida.tistory.com/
               </a>
             </p>
             <p className="me-profile__git">
-              <strong>git</strong> :{" "}
+              <strong className="p-tit">Git</strong> :{" "}
               <a href="https://github.com/sanghwanAN" target="_blank">
                 https://github.com/sanghwanAN
               </a>

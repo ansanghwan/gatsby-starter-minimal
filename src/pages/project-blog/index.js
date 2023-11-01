@@ -48,8 +48,8 @@ export const query = graphql`
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {
-          date(formatString: "YYYY/MM/DD")
-          enddate(formatString: "YYYY/MM/DD")
+          date(formatString: "YYYY.MM.DD")
+          enddate(formatString: "YYYY.MM.DD")
           hero_image {
             childImageSharp {
               gatsbyImageData

@@ -81,6 +81,7 @@ $css: #d3ffde;
 $javscript: #ffedc9;
 $rwd: #57d700;
 $react: tan;
+$wa: #00c5d7;
 $git: tomato;
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -98,6 +99,7 @@ $theme-colors: map-merge(
     "javscript": $javscript,
     "rwd": $rwd,
     "react": $react,
+    "wa": $wa,
     "git": $git,
   ),
   $theme-colors

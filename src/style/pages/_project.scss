@@ -1,11 +1,17 @@
 .sanghwan-portfolio--mdx {
+  padding-bottom: 60px;
   .badge-wrap {
     padding: 10px 0;
   }
-  ul {
-    padding-left: 20px;
-    // list-style-type: none;
+  .project-detail__cont {
+    ul {
+      padding-left: 20px;
+      > li {
+        margin-bottom: 24px;
+      }
+    }
   }
+
   blockquote {
     background: #041529;
     border-left: 0.5rem solid #0e2e54;
@@ -96,6 +102,7 @@
   }
 
   .sanghwan-portfolio--mdx {
+    padding-bottom: 100px;
     .badge-wrap {
       margin-bottom: 56px;
     }
@@ -107,6 +114,7 @@
       > ul {
         padding-left: 0;
         list-style-type: none;
+
         > li {
           position: relative;
           padding-left: 26px;
@@ -127,10 +135,6 @@
     }
     h3 {
       font-size: 30px;
-    }
-    ul > li:not(:first-child),
-    ol > li:not(:first-child) {
-      margin-top: 2rem;
     }
   }
 }

@@ -101,6 +101,9 @@ body {
 }
 .badge-wrap {
   position: relative;
+  .badge {
+    font-weight: 400;
+  }
 }
 @media (min-width: $breakpoint-sm) {
   .sanghwan-portfolio-body__inner {
@@ -138,6 +141,19 @@ body {
   .sanghwan-portfolio-nav__ul {
     > li {
       font-size: 20px;
+    }
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .nav-link-text {
+    font-size: 32px;
+  }
+
+  .sanghwan-portfolio-nav__ul > li {
+    font-size: 26px;
+    a {
+      padding: 20px 24px;
     }
   }
 }
