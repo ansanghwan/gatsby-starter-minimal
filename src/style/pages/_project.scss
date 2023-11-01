@@ -10,6 +10,17 @@
         margin-bottom: 24px;
       }
     }
+    ol {
+      > li {
+        margin-bottom: 18px;
+      }
+    }
+    blockquote + p {
+      margin-top: 30px;
+    }
+    p + blockquote {
+      margin-top: 14px;
+    }
   }
 
   blockquote {
@@ -17,6 +28,7 @@
     border-left: 0.5rem solid #0e2e54;
     em {
       color: #959fb5;
+      font-style: normal;
     }
     small {
       padding-left: 10px;
@@ -33,6 +45,7 @@
   }
   em {
     color: tan;
+    font-style: normal;
   }
   small {
     position: relative;
