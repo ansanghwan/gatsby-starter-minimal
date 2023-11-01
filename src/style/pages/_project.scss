@@ -87,6 +87,9 @@
       font-size: 30px;
       margin-bottom: 10px;
     }
+    .project-detail__cont {
+      word-break: keep-all;
+    }
     .badge-wrap {
       margin-bottom: 14px;
       .badge {
@@ -132,7 +135,6 @@
           position: relative;
           padding-left: 26px;
           font-size: 20px;
-          word-break: keep-all;
           &:after {
             content: "";
             position: absolute;
