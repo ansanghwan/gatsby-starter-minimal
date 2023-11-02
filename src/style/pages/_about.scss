@@ -1,7 +1,19 @@
 .sanghwan-portfolio--about {
+  padding-bottom: 60px;
   .page-title {
     font-family: "Roboto", sans-serif;
+    position: relative;
+    overflow: hidden;
+    > span {
+      display: block;
+      position: relative;
+      transform-origin: 0% 0%;
+      opacity: 0;
+      transform: rotate(16deg);
+      animation: about-title-ani 3.2s forwards;
+    }
   }
+
   .me-profile {
     overflow: hidden;
     padding: 1rem 0 3rem;
@@ -61,7 +73,7 @@
     }
   }
   .about-sec {
-    padding: 0.5rem 1rem 0;
+    padding: 0.5rem 0 0;
     font-weight: 300;
     word-break: keep-all;
     > ul {
@@ -125,5 +137,23 @@
         }
       }
     }
+  }
+}
+
+@keyframes about-title-ani {
+  0% {
+    opacity: 0;
+    transform: rotate(16deg);
+  }
+  30% {
+    transform: rotate(0);
+  }
+  70% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0);
   }
 }

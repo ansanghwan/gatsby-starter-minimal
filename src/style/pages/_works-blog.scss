@@ -3,6 +3,16 @@
   .page-title {
     text-align: center;
     font-family: "Roboto", sans-serif;
+    position: relative;
+    overflow: hidden;
+    > span {
+      display: block;
+      position: relative;
+      transform-origin: 0% 0%;
+      opacity: 0;
+      transform: translateY(130px);
+      animation: project-title-ani 3.2s forwards;
+    }
   }
 }
 .project-list {
@@ -101,7 +111,8 @@
 @media (min-width: $breakpoint-md) {
   .project-list {
     > li {
-      flex-basis: 30%;
+      flex: 0;
+      flex-basis: calc(32% - 8px);
     }
   }
 }
@@ -112,7 +123,7 @@
   .project-list {
     gap: 46px;
     > li {
-      flex-basis: 300px;
+      flex-basis: calc(24% - 23px);
     }
   }
   .project-list__thumbnail {
@@ -129,5 +140,23 @@
     .project-list__date {
       padding-bottom: 4px;
     }
+  }
+}
+
+@keyframes project-title-ani {
+  0% {
+    opacity: 0;
+    transform: translateY(130px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
