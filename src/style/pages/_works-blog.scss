@@ -120,12 +120,7 @@
   .sanghwan-portfolio--project {
     padding-bottom: 100px;
   }
-  .project-list {
-    gap: 46px;
-    > li {
-      flex-basis: calc(24% - 23px);
-    }
-  }
+
   .project-list__thumbnail {
     padding-top: 60%;
   }
@@ -142,7 +137,14 @@
     }
   }
 }
-
+@media (min-width: $breakpoint-xl) {
+  .project-list {
+    gap: 46px;
+    > li {
+      flex-basis: calc(24% - 23px);
+    }
+  }
+}
 @keyframes project-title-ani {
   0% {
     opacity: 0;
