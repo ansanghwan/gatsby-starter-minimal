@@ -18,11 +18,13 @@
 .project-list {
   padding: 0;
   list-style: none;
+  max-width: 1152px;
+  margin: 0 auto;
   a {
     color: inherit;
   }
   > li {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
   }
 }
 .project-list__item {
@@ -43,8 +45,9 @@
   display: block;
   position: relative;
   height: 0;
-  padding-top: 56%;
+  padding-top: 85%;
   overflow: hidden;
+  z-index: 1;
   &::after {
     content: "";
     position: absolute;
@@ -76,12 +79,19 @@
   }
 }
 .project-list__conts {
-  padding: 14px 12px 18px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 90px;
+  padding: 20px 12px 22px;
+  background: #fff;
+  z-index: 3;
   > p {
-    font-size: 13px;
+    font-size: calc(11px + (16 - 11) * ((100vw - 280px) / (575 - 280)));
   }
   .project-list__label {
-    font-size: 16px;
+    font-size: calc(14px + (19 - 14) * ((100vw - 280px) / (575 - 280)));
   }
 }
 .project-list__label {
@@ -101,21 +111,38 @@
   .project-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 18px;
+    gap: 24px;
     > li {
-      flex: 1 1 40%;
+      flex: 0 1;
+      flex-basis: calc((100% - 24px) / 2);
       margin-bottom: 0;
+      transform: translateZ(0);
+      transition: transform 0.4s ease-in-out 0s, box-shadow 0.4s ease-in-out 0s;
+      &:hover {
+        transform: translate3d(0px, -3%, 0px);
+        box-shadow: rgba(62, 62, 98, 0.7) 0px 16px 22.4px 4.8px,
+          rgba(62, 62, 98, 0.1) 0px 3.2px 16px 0px,
+          rgba(62, 62, 98, 0.1) 0px 0px 1px 0px;
+      }
+    }
+  }
+  .project-list__thumbnail {
+    padding-top: 60%;
+  }
+  .project-list__conts {
+    position: relative;
+    padding: 18px 14px 18px;
+
+    > p {
+      font-size: 16px;
+    }
+    .project-list__label {
+      font-size: 18px;
+      letter-spacing: -1px;
     }
   }
 }
-@media (min-width: $breakpoint-md) {
-  .project-list {
-    > li {
-      flex: 0;
-      flex-basis: calc(32% - 8px);
-    }
-  }
-}
+// @media (min-width: $breakpoint-md) {}
 @media (min-width: $breakpoint-lg) {
   .sanghwan-portfolio--project {
     padding-bottom: 100px;
@@ -125,10 +152,8 @@
     padding-top: 60%;
   }
   .project-list__conts {
-    padding: 20px 12px 14px;
-    > p {
-      font-size: 15px;
-    }
+    padding: 22px 16px 20px;
+
     .project-list__label {
       font-size: 18px;
     }
@@ -136,15 +161,14 @@
       padding-bottom: 4px;
     }
   }
-}
-@media (min-width: $breakpoint-xl) {
   .project-list {
-    gap: 46px;
+    gap: 33px;
     > li {
-      flex-basis: calc(24% - 23px);
+      flex-basis: calc((100% - 66px) / 3);
     }
   }
 }
+// @media (min-width: $breakpoint-xl) {}
 @keyframes project-title-ani {
   0% {
     opacity: 0;
