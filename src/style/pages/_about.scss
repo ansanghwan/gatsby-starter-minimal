@@ -16,31 +16,21 @@
 
   .me-profile {
     overflow: hidden;
-    padding: 1rem 0 3rem;
-    display: flex;
+    // padding: 1rem 0 3rem;
+    // display: flex;
     align-items: center;
-    @media (min-width: $breakpoint-md) {
-      .me-profile__right {
-        // padding-left: 3rem;
-      }
-    }
+    margin-bottom: 70px;
   }
-  .me-profile__img {
-    display: inline-block;
+
+  .me-profile__me {
     position: relative;
-    max-width: 180px;
-    border-radius: 100%;
-    overflow: hidden;
-    background: url(../images/bg_picture_me.jpg) 50% 50% / cover;
-    flex: 0 0 40%;
-    &:after {
-      content: "";
-      display: block;
-      padding-bottom: 100%;
+
+    // background: #ee9506;
+    // padding: 14px;
+    img {
     }
   }
-  .me-profile__right {
-    flex: 1 0 60%;
+  .me-profile__profile {
     padding-left: 0;
     color: #fff;
     // font-size: 0.9375rem;
@@ -73,7 +63,7 @@
     }
   }
   .about-sec {
-    padding: 0.5rem 0 0;
+    // padding: 0.5rem 0 0;
     font-weight: 300;
     word-break: keep-all;
     > ul {
@@ -86,45 +76,63 @@
     }
   }
   .about-sec + .about-sec {
-    margin-top: 2rem;
+    margin-top: 32px;
   }
   .about-sec__tit {
-    margin-bottom: 2rem;
-    font-size: 1.875rem;
-    font-weight: 700;
-    letter-spacing: -1px;
-    color: #0877b6;
+    margin-bottom: 32px;
+    font-size: 30px;
+    font-weight: 500;
+    color: #fff;
   }
   .closing-ment {
     padding-top: 0.5rem;
     text-align: right;
   }
+  .strong-point-list {
+    > li {
+      em {
+        font-size: 12px;
+      }
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
 }
 
 @media (min-width: $breakpoint-md) {
   .sanghwan-portfolio--about {
-    .me-profile__name {
-      font-size: 40px;
-      margin-bottom: 30px;
+    .page-title {
+      text-align: center;
     }
-    .me-profile__right {
-      font-size: 22px;
+    .me-profile__me {
+      text-align: center;
     }
     .about-sec {
-      font-size: 18px;
+      max-width: 764px;
+      margin: 0 auto;
+      // font-size: 18px;
     }
     .about-sec__tit {
       font-size: 44px;
-      font-weight: bold;
+    }
+    .strong-point-list {
+      > li {
+        em {
+          font-size: 16px;
+        }
+      }
     }
   }
 }
 @media (min-width: $breakpoint-lg) {
   .sanghwan-portfolio--about {
     .about-sec {
-      font-size: 23px;
-      line-height: 38px;
-      font-weight: 400;
+      font-size: 20px;
+      line-height: 34px;
+      + .about-sec {
+        margin-top: 60px;
+      }
       .me-profile__right {
         .me-profile__name {
           margin-bottom: 20px;

@@ -3,83 +3,62 @@ import Layout from "../components/layout";
 
 const AboutPage = () => {
   return (
-    <Layout pageTitle="About Me" pageClassName="sanghwan-portfolio--about">
+    <Layout
+      pageTitle="I am a web publisher"
+      pageClassName="sanghwan-portfolio--about"
+    >
       <section className="about-sec about-sec--top">
         <div className="me-profile">
           {/* <span className="me-profile__img"></span> */}
-          <div className="me-profile__right">
-            <p className="me-profile__name">
-              {" "}
-              <strong>안상환</strong>{" "}
-            </p>
-            <p>
-              <strong className="p-tit">Blog</strong> :{" "}
-              <a href="https://sh-sida.tistory.com/" target="_blank">
-                https://sh-sida.tistory.com/
-              </a>
-            </p>
-            <p className="me-profile__git">
-              <strong className="p-tit">Git</strong> :{" "}
-              <a href="https://github.com/sanghwanAN" target="_blank">
-                https://github.com/sanghwanAN
-              </a>
-            </p>
+          <div className="me-profile__me">
+            <img src="/images/about_me.png" alt="" />
           </div>
         </div>
-        <h3 className="about-sec__tit">산전 수전 공중전</h3>
+        <h3 className="about-sec__tit">About</h3>
         안녕하세요, <br />
-        <em>현재는 프리랜서</em> 웹 퍼블리셔 <em>안상환</em> 입니다.
-        <br /> 5년 간의 부사관(병 생활 포함) 복무 하고 전역 후에 직업 전문
-        학교에서 웹 퍼블리셔 교육을 받고 지금 까지 개인 공부를 게을리 하지
-        않으며 어려운 일, 남들이 가지 않는 프로젝트 등 가리지 않고, 책임감 있게
-        프로젝트들을 수행 하며 여기까지 성장 해 왔습니다. <br />
-        프리랜서를 하면서 구인이 되지 않거나 퍼블리셔가 자주 교체 되는 프로젝트
-        중간에 투입 되어 문제 해결사 역할을 주로 해왔습니다. <br />
-        덕분에 예상하지 못한 문제 들을 많이 접했고, 그 문제들을 해결 해 나가면서
-        성장의 원동력이 되었습니다. <br />
-        저는 반응형 웹의 자신이 있으며, Scss, Git, Reac.js에서 마크업, 웹
-        접근성, 크로스 브라우징이 가능 합니다. <br /> <br />
-        최근 react 프로젝트(carrot보험 구축, 웅진 스마트올 app)를 수행 한 경험
-        있고 react.js 환경에서 퍼블리싱이 가능합니다.
+        웹퍼블리셔 안상환 입니다. <br />
+        프리랜서로 주로 문제가 발생하는 구축 프로젝트, 운영 프로젝트 위주로
+        교체로 투입하여 프로젝트를 마무리까지 완료하는 전문 웹퍼블리셔 안상환
+        입니다.
+        <br /> <br />
+        프리랜서로 참여한 모든 프로젝트들은 모두 기존 웹퍼블리셔들이 처리하지
+        못한 업무들을 제가 교체로 투입하여 업무들을 처리하였습니다.
         <br />
-        현재 까지 모든 프로젝트들을 asap 프로젝트만 진행 하였고 마무리까지 완료
-        하였습니다. <br />
-        꼼꼼하고 ,정직하고, 책임감 있고 신속하게 화면 퍼블리싱을 할 수 있다고
-        자신 있게 말씀드릴 수 있습니다. <br />
+        프로젝트에서 제가 처리했던 자세한 내용들은 저의 Project-Blog에서 확인
+        부탁드립니다.
+        <br /> <br />
+        웹 표준, 웹 접근성, javascript, 그리고 react.js 환경에서도 퍼블리싱이
+        가능합니다.
         <br />
-        감사합니다.
+        가이드 제작뿐만 아니라 타 부서와도 원활한 커뮤니티 또한 가능합니다.
       </section>
-      {/* <section className="about-sec">
-        <h3 className="about-sec__tit">
-          프리랜서에서 정규직으로 희망하는 이유
-        </h3>
-        <em>다양한 환경</em> 에서, <em>다양한 사람</em>들과 일을 해 왔습니다.
-        <br />
-        지금 까지의 경험을 토대로 <em>안정</em>적인 곳에서 고정적인{" "}
-        <em>동료</em>들과 <em>프로젝트에 대해서 함께 고민하고 집중</em>할 수
-        있으려면 회사에 <em>정규직 입사</em>를 해야 된다고 <em>판단</em>이 되어
-        이렇게 정규직 입사를 희망 하고 있습니다.
-      </section> */}
 
       <section className="about-sec">
-        <h3 className="about-sec__tit">저는 아래의 업무 강점이 있습니다.</h3>
-        <ul>
-          <li>시멘틱 마크업 웹표준에 이해가 깊다고 할 수 있습니다.</li>
+        <h3 className="about-sec__tit">Strong Point</h3>
+        <ul className="strong-point-list">
           <li>
-            Html,Css/Scss를 꼬이지 않고 규칙적으로 마크업을 할 수 있습니다.
+            SI 및 SM 프로젝트를 골고루 진행 하였으며 구축 업무 및 운영 업무도 다
+            소화가 가능 합니다. <em>(Project-Blog 참고)</em>
           </li>
           <li>
-            javscript를 꾸준히 공부하고 있으며 기본적인 es6 문법을 이해하고
-            있습니다.
+            반응형 퍼블리싱에 강점이 있습니다. 다수의 반응형 프로젝트에서
+            단독으로 퍼블리싱 경험이 많습니다.(Project-Blog 참고)
+          </li>
+          <li>
+            React.js에서 퍼블리싱이 가능 하며 다수의 React.js 프로젝트를 수행
+            하였습니다.<em>(Project-Blog 참고)</em>
           </li>
           <li>
             프론트 엔드 환경(react.js) 에서 퍼블리싱 경험이 있으며, react.js
-            환경에서 퍼블리싱이 가능 합니다. <br />
-            styled-components, Storybook 사용하여 퍼블리싱 가능 합니다.
+            환경에서 퍼블리싱이 가능 합니다.(styled-components, Storybook을
+            사용하여 퍼블리싱 가능 합니다.)
+          </li>
+          <li>
+            은행 및 보험사 등 다수의 금융권 구축 및 운영 프로젝트를 경험하였기
+            때문에 금융권 프로젝트를 수행하는데 어려움이 없습니다.
+            <em>(Project-Blog 참고)</em>
           </li>
         </ul>
-
-        <p className="closing-ment">- 끝까지 읽어 주셔서 감사합니다. -</p>
       </section>
     </Layout>
   );
