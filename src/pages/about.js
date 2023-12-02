@@ -36,21 +36,21 @@ const AboutPage = () => {
         <h3 className="about-sec__tit">Strong Point</h3>
         <ul className="strong-point-list">
           <li>
-            SI 및 SM 프로젝트를 골고루 진행 하였으며 구축 업무 및 운영 업무도 다
-            소화가 가능 합니다. <em>(Project-Blog 참고)</em>
+            SI 및 SM 프로젝트를 골고루 진행하였으며 구축 업무 및 운영 업무의
+            노하우를 바탕으로 구축 업무, 운영 업무를 안정되게 할 수 있습니다.
+            <em>(Project-Blog 참고)</em>
           </li>
           <li>
             반응형 퍼블리싱에 강점이 있습니다. 다수의 반응형 프로젝트에서
             단독으로 퍼블리싱 경험이 많습니다.(Project-Blog 참고)
           </li>
-          <li>
-            React.js에서 퍼블리싱이 가능 하며 다수의 React.js 프로젝트를 수행
-            하였습니다.<em>(Project-Blog 참고)</em>
-          </li>
+
           <li>
             프론트 엔드 환경(react.js) 에서 퍼블리싱 경험이 있으며, react.js
-            환경에서 퍼블리싱이 가능 합니다.(styled-components, Storybook을
-            사용하여 퍼블리싱 가능 합니다.)
+            환경에서 퍼블리싱이 가능 합니다.
+            <em>
+              (styled-components, Storybook을 사용하여 퍼블리싱 가능 합니다.)
+            </em>
           </li>
           <li>
             은행 및 보험사 등 다수의 금융권 구축 및 운영 프로젝트를 경험하였기

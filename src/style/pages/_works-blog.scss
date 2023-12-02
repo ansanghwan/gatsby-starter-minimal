@@ -16,16 +16,22 @@
   }
 }
 .project-list {
+  position: relative;
+  top: 0;
   padding: 0;
+  opacity: 0;
   list-style: none;
   max-width: 1152px;
   margin: 0 auto;
+  transform: translateY(100px);
   a {
     color: inherit;
   }
   > li {
     margin-bottom: 24px;
   }
+
+  animation: project-cont-ani 3.2s forwards 0.5s;
 }
 .project-list__item {
   overflow: hidden;
@@ -178,6 +184,24 @@
     transform: translateY(0);
   }
   70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes project-cont-ani {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  90% {
     opacity: 1;
     transform: translateY(0);
   }
