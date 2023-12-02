@@ -24,11 +24,6 @@
 
   .me-profile__me {
     position: relative;
-
-    // background: #ee9506;
-    // padding: 14px;
-    img {
-    }
   }
   .me-profile__profile {
     padding-left: 0;
@@ -63,17 +58,19 @@
     }
   }
   .about-sec {
-    // padding: 0.5rem 0 0;
+    position: relative;
+    top: 0;
+    transform: translateY(100px);
     font-weight: 300;
     word-break: keep-all;
+    opacity: 0;
     > ul {
       margin-left: 20px;
     }
     em {
       font-style: normal;
-      // font-weight: 500;
-      // color: #49659b;
     }
+    animation: about-cont-ani 3.2s forwards 0.5s;
   }
   .about-sec + .about-sec {
     margin-top: 32px;
@@ -163,5 +160,23 @@
   100% {
     opacity: 1;
     transform: rotate(0);
+  }
+}
+
+@keyframes about-cont-ani {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
