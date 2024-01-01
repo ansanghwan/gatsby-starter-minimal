@@ -24,6 +24,9 @@
 
   .me-profile__me {
     position: relative;
+    img {
+      display: inline-block;
+    }
   }
   .me-profile__profile {
     padding-left: 0;
@@ -64,9 +67,6 @@
     font-weight: 300;
     word-break: keep-all;
     opacity: 0;
-    > ul {
-      margin-left: 20px;
-    }
     em {
       font-style: normal;
     }
@@ -86,6 +86,7 @@
     text-align: right;
   }
   .strong-point-list {
+    margin-left: 0;
     > li {
       em {
         font-size: 12px;

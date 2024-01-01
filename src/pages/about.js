@@ -7,7 +7,7 @@ const AboutPage = () => {
       pageTitle="I am a web publisher"
       pageClassName="sanghwan-portfolio--about"
     >
-      <section className="about-sec about-sec--top">
+      <section className="about-sec">
         <div className="me-profile">
           {/* <span className="me-profile__img"></span> */}
           <div className="me-profile__me">
