@@ -3,6 +3,7 @@
   .page-title {
     position: relative;
     overflow: hidden;
+    text-align: center;
     > span {
       display: block;
       position: relative;
@@ -91,7 +92,10 @@
   .project-detail {
     display: flex;
     flex-wrap: wrap;
-    align-items: top;
+    align-items: flex-start;
+    margin: 0 auto;
+    max-width: 1400px;
+    justify-content: center;
   }
   .project-detail__img {
     position: relative;
@@ -115,6 +119,7 @@
     }
     .project-detail__cont {
       word-break: keep-all;
+      max-width: 640px;
     }
     .badge-wrap {
       margin-bottom: 14px;
