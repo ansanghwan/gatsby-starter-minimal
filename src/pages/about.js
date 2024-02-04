@@ -42,7 +42,7 @@ const AboutPage = () => {
           </li>
           <li>
             반응형 퍼블리싱에 강점이 있습니다. 다수의 반응형 프로젝트에서
-            단독으로 퍼블리싱 경험이 많습니다.(Project-Blog 참고)
+            단독으로 퍼블리싱 경험이 많습니다.<em>(Project-Blog 참고)</em>
           </li>
 
           <li>

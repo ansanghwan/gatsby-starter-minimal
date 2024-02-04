@@ -4,6 +4,7 @@
     position: relative;
     overflow: hidden;
     text-align: center;
+    word-break: keep-all;
     > span {
       display: block;
       position: relative;
