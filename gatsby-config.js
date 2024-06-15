@@ -25,7 +25,7 @@ module.exports = {
           google: [
             {
               family: "Roboto",
-              variants: ["300", "400", "500", "700"],
+              variants: ["300", "400", "500", "700", "900"],
             },
             {
               family: "Open Sans Condensed",

@@ -17,7 +17,8 @@
   "license": "0BSD",
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
-    "gatsby": "^5.12.4",
+    "gatsby": "^5.13.6",
+    "gatsby-cli": "^5.13.3",
     "gatsby-plugin-image": "^3.12.2",
     "gatsby-plugin-mdx": "^5.12.2",
     "gatsby-plugin-sass": "^6.12.3",

@@ -1,14 +1,33 @@
 .sanghwan-portfolio--home {
+  .page-title {
+    display: none;
+  }
   .sanghwan-portfolio-body {
+    height: 100%;
     text-align: center;
     font-weight: 700;
     font-size: calc(45px + (136 - 45) * ((100vw - 280px) / (767 - 280)));
     line-height: calc(48px + (128 - 48) * ((100vw - 280px) / (767 - 280)));
+    // padding-top: 50px;
+    width: 100%;
+    &__inner {
+      position: relative;
+      padding: 0 0 0 20px;
+      height: 100%;
+      // overflow-y: auto;
+    }
   }
 }
-.home-ment {
+.home-intro {
+  position: absolute;
+  z-index: 2;
   word-break: keep-all;
   text-align: left;
+  top: 50%;
+  transform: translate(-110%, -50%);
+  animation: home-intro-ment-ani 1.1s 1s;
+  animation-fill-mode: forwards;
+  // color: #5ad4d1;
   p {
     position: relative;
     overflow: hidden;
@@ -37,6 +56,54 @@
       }
     }
   }
+  &__inner {
+    position: relative;
+  }
+}
+.home-intro-circle {
+  position: absolute;
+  left: -100%;
+  width: 100%;
+  height: 200%;
+  // background: radial-gradient(
+  //   107.84% 107.84% at 24.11% 90.68%,
+  //   rgba(3, 51, 54, 0) 40%,
+  //   #033336 90%
+  // );
+  background: radial-gradient(
+    107.84% 107.84% at 24.11% 90.68%,
+    rgba(3, 51, 54, 0) 40%,
+    #3d4141 90%
+  );
+
+  // -webkit-backdrop-filter: blur(25px);
+  // backdrop-filter: blur(25px);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  animation: home-intro-circle-ani 1.1s 1s;
+  animation-fill-mode: forwards;
+  transform-origin: center center;
+}
+.ash-character {
+  position: absolute;
+  // left: 15%;
+  // top: 42%;
+
+  left: -40%;
+  top: 100%;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 50%;
+  z-index: 10;
+  // border: 10px solid red;
+  background: #006cb8 url(/images/ansanghwan_character.png) no-repeat 78% 4% /
+    640px auto;
+
+  animation: home-intro-character-ani 1.1s 0.3s;
+  animation-fill-mode: forwards;
 }
 @keyframes home-font-ani {
   0% {
@@ -66,7 +133,7 @@
     height: 100%;
     z-index: 1;
     background: #000;
-    animation: me-pic-ani 0.7s forwards 0.4s;
+    animation: me-pic-ani 0.1s forwards 0.8s;
   }
 }
 
@@ -118,11 +185,8 @@
       text-align: left;
       font-weight: 700;
     }
-    .sanghwan-portfolio-body__inner {
-      padding-top: 100px;
-    }
   }
-  .home-ment {
+  .home-intro {
     p {
       margin-bottom: 80px;
     }
@@ -140,13 +204,27 @@
     }
   }
 }
+//PC
 @media (min-width: $breakpoint-xl) {
   .sanghwan-portfolio--home {
-    .sanghwan-portfolio-body {
-      font-size: 221px;
+    height: 100vh;
+    overflow: hidden;
+
+    .sanghwan-portfolio-header {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 90px;
     }
-    .sanghwan-portfolio-body__inner {
-      padding-top: 140px;
+  }
+  .home-intro {
+    &__inner {
+      font-size: 170px;
+      line-height: 75%;
+      font-weight: 900;
+      letter-spacing: -8px;
     }
   }
   .home-me-wrap {
@@ -160,5 +238,82 @@
       width: 100%;
       max-width: none;
     }
+  }
+}
+
+@keyframes home-intro-character-ani {
+  0% {
+    left: -150%;
+    top: 250%;
+  }
+  40% {
+    left: 15%;
+    top: 42%;
+  }
+  100% {
+    left: 15%;
+    top: 42%;
+  }
+}
+
+@keyframes home-intro-ment-ani {
+  0% {
+    top: 50%;
+    transform: translate(-100%, -50%);
+    opacity: 1;
+  }
+  60% {
+    top: 50%;
+    transform: translate(3%, -50%);
+    opacity: 1;
+  }
+
+  // 75% {
+  //   top: 56%;
+  //   transform: translate(8%, -50%);
+  //   opacity: 1;
+  // }
+  // 80% {
+  //   top: 56%;
+  //   transform: translate(6%, -50%);
+  //   opacity: 1;
+  // }
+  // 95% {
+  //   top: 56%;
+  //   transform: translate(8%, -50%) cale(1.1);
+  //   opacity: 0.5;
+  // }
+  100% {
+    top: 56%;
+    transform: translate(6%, -50%) scale(1.1);
+    opacity: 0.5;
+  }
+}
+
+@keyframes home-intro-circle-ani {
+  0% {
+    left: -100%;
+    border-radius: 50%;
+  }
+  35% {
+    left: -360px;
+    border-radius: 50%;
+  }
+  58% {
+    left: -360px;
+    border-radius: 50%;
+  }
+
+  59% {
+    left: -200px;
+    border-radius: 50%;
+  }
+  90% {
+    border-radius: 20%;
+  }
+
+  100% {
+    left: 0;
+    border-radius: 0;
   }
 }
