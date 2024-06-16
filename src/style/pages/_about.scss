@@ -1,6 +1,7 @@
 .sanghwan-portfolio--about {
   padding-bottom: 60px;
   .page-title {
+    text-align: center;
     font-family: "Roboto", sans-serif;
     position: relative;
     overflow: hidden;
@@ -24,6 +25,7 @@
 
   .me-profile__me {
     position: relative;
+    text-align: center;
     img {
       display: inline-block;
     }
@@ -100,9 +102,6 @@
 
 @media (min-width: $breakpoint-md) {
   .sanghwan-portfolio--about {
-    .page-title {
-      text-align: center;
-    }
     .me-profile__me {
       text-align: center;
     }

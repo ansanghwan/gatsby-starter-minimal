@@ -8,20 +8,24 @@ const IndexPage = () => {
       {/* <div className="home-me-wrap">
         <span></span>
       </div> */}
-      <div className="ash-character">
-        {/* <img src="/images/ansanghwan_character.png" alt="" /> */}
-      </div>
-      <div className="home-intro eng-text">
-        <div className="home-intro__inner">
-          <span>HTML5</span>
-          <br />
-          <span>CSS3/SCSS</span>
-          <br />
-          <span>JAVASCRIPT</span>
-          <br />
+      <div className="home-intro-cont">
+        <div className="ash-character">
+          <div className="ash-character__inner">
+            <span className="ash-character__shining"></span>
+          </div>
+        </div>
+        <div className="home-intro eng-text">
+          <div className="home-intro__inner">
+            <span>HTML5</span>
+            <br />
+            <span>CSS3/SCSS</span>
+            <br />
+            <span>JAVASCRIPT</span>
+            <br />
+          </div>
         </div>
       </div>
-      <span className="home-intro-circle"></span>
+      <span className="home-intro-bg"></span>
     </Layout>
   );
 };
