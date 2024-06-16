@@ -5,27 +5,27 @@ import Seo from "../components/seo";
 const IndexPage = () => {
   return (
     <Layout pageTitle="" pageClassName="sanghwan-portfolio--home">
-      <div className="home-me-wrap">
-        <div className="home-me-wrap__inner">
-          <span className="home-me"></span>
+      {/* <div className="home-me-wrap">
+        <span></span>
+      </div> */}
+      <div className="home-intro-cont">
+        <div className="ash-character">
+          <div className="ash-character__inner">
+            <span className="ash-character__shining"></span>
+          </div>
+        </div>
+        <div className="home-intro eng-text">
+          <div className="home-intro__inner">
+            <span>HTML5</span>
+            <br />
+            <span>CSS3/SCSS</span>
+            <br />
+            <span>JAVASCRIPT</span>
+            <br />
+          </div>
         </div>
       </div>
-      <div className="home-ment eng-text">
-        <p>
-          <span>Web Portfolio</span>
-        </p>
-        <p>
-          <span>
-            WEB <br /> PUBLISHER{" "}
-          </span>
-        </p>
-        <p>
-          <span>Sanghwan An</span>
-        </p>
-        {/* <p>
-          React gatsby, gatsby cloud를 사용한 <br />웹 포트폴리오 입니다.
-        </p> */}
-      </div>
+      <span className="home-intro-bg"></span>
     </Layout>
   );
 };
