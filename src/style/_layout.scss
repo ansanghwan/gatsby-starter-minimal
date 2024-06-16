@@ -158,3 +158,8 @@ body {
     }
   }
 }
+@media (min-width: $breakpoint-xl) {
+  .sanghwan-portfolio-header {
+    height: 90px;
+  }
+}
