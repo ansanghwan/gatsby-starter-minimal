@@ -15,7 +15,9 @@
     }
   }
   .badge-wrap {
-    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 2px;
   }
   .project-detail__img {
     position: relative;
@@ -124,9 +126,6 @@
     }
     .badge-wrap {
       margin-bottom: 14px;
-      .badge {
-        margin: 0 7px;
-      }
     }
     .badge {
       font-size: 16px;
