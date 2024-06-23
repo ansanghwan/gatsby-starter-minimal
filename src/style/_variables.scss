@@ -83,6 +83,8 @@ $rwd: #57d700;
 $react: tan;
 $wa: #00c5d7;
 $git: tomato;
+$buildTool: purple;
+$cms: brown;
 $theme-colors: () !default;
 $theme-colors: map-merge(
   (
@@ -101,6 +103,8 @@ $theme-colors: map-merge(
     "react": $react,
     "wa": $wa,
     "git": $git,
+    "build": $buildTool,
+    "cms": $cms,
   ),
   $theme-colors
 );
