@@ -11,7 +11,7 @@ const AboutPage = () => {
         <div className="me-profile">
           {/* <span className="me-profile__img"></span> */}
           <div className="me-profile__me">
-            <img src="/images/about_me.png" alt="" />
+            <img src="/images/about_me.jpg" alt="" />
           </div>
         </div>
         <h3 className="about-sec__tit">About</h3>

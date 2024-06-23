@@ -17,17 +17,24 @@
 
   .me-profile {
     overflow: hidden;
-    // padding: 1rem 0 3rem;
-    // display: flex;
     align-items: center;
     margin-bottom: 70px;
+    text-align: center;
   }
 
   .me-profile__me {
     position: relative;
     text-align: center;
+    display: inline-block;
+    width: 60%;
+    border-radius: 8px;
+    overflow: hidden;
     img {
       display: inline-block;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      animation: about-me-ani 9s infinite 0.3s;
     }
   }
   .me-profile__profile {
@@ -104,6 +111,7 @@
   .sanghwan-portfolio--about {
     .me-profile__me {
       text-align: center;
+      width: 340px;
     }
     .about-sec {
       max-width: 764px;
@@ -178,5 +186,18 @@
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes about-me-ani {
+  0% {
+    filter: opacity(1);
+  }
+
+  40% {
+    filter: opacity(0.6);
+  }
+  100% {
+    filter: opacity(1);
   }
 }
