@@ -28,6 +28,7 @@ body {
   a {
     color: inherit;
     text-decoration: none;
+    font-weight: 700;
   }
 }
 .sanghwan-portfolio-header__inner {
@@ -87,8 +88,10 @@ body {
 .page-title {
   margin-bottom: 36px;
   font-size: calc(47px + (61 - 47) * ((100vw - 280px) / (575 - 280)));
-  line-height: normal;
-  font-weight: 500;
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -1px;
+  text-transform: uppercase;
 }
 .sanghwan-portfolio-body__inner {
   position: relative;
@@ -147,6 +150,9 @@ body {
 }
 
 @media (min-width: $breakpoint-lg) {
+  .page-title {
+    font-size: 98px;
+  }
   .nav-link-text {
     font-size: 32px;
   }
