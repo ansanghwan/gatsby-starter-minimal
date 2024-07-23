@@ -85,17 +85,19 @@
     margin-top: 32px;
   }
   .about-sec__tit {
+    font-family: "Roboto", sans-serif;
     margin-bottom: 32px;
     font-size: 30px;
     font-weight: 500;
     color: #fff;
+    text-transform: uppercase;
   }
   .closing-ment {
     padding-top: 0.5rem;
     text-align: right;
   }
   .strong-point-list {
-    margin-left: 0;
+    margin-left: 16px;
     > li {
       em {
         font-size: 12px;
@@ -148,6 +150,17 @@
           color: #c7c7c7;
           font-weight: 300;
         }
+      }
+      &__tit {
+        font-size: 50px;
+        font-weight: 700;
+        letter-spacing: -1px;
+      }
+      .strong-point-list > li,
+      &__cont {
+        font-size: 22px;
+        line-height: 32px;
+        font-weight: 400;
       }
     }
   }

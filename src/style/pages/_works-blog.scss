@@ -104,7 +104,8 @@
 }
 .project-list__label {
   padding-bottom: 6px;
-  font-weight: bold;
+  font-weight: 500;
+  text-transform: uppercase;
 }
 .project-list__date {
   color: #777;
@@ -147,7 +148,7 @@
       font-size: 16px;
     }
     .project-list__label {
-      font-size: 18px;
+      font-size: 19px;
       letter-spacing: -1px;
     }
   }

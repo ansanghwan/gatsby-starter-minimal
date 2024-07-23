@@ -3,10 +3,7 @@ import Layout from "../components/layout";
 
 const AboutPage = () => {
   return (
-    <Layout
-      pageTitle="I am a web publisher"
-      pageClassName="sanghwan-portfolio--about"
-    >
+    <Layout pageTitle="Sang Hwan An" pageClassName="sanghwan-portfolio--about">
       <section className="about-sec">
         <div className="me-profile">
           {/* <span className="me-profile__img"></span> */}
@@ -15,21 +12,23 @@ const AboutPage = () => {
           </div>
         </div>
         <h3 className="about-sec__tit">About</h3>
-        안녕하세요, <br />
-        웹퍼블리셔 안상환 입니다. <br />
-        프리랜서로 주로 문제가 발생하는 구축 프로젝트, 운영 프로젝트 위주로
-        교체로 투입하여 프로젝트를 마무리까지 완료하는 전문 웹퍼블리셔입니다.
-        <br /> <br />
-        프리랜서로 참여한 모든 프로젝트들은 모두 기존 웹퍼블리셔들이 처리하지
-        못한 업무들을 교체로 투입하여 업무들을 처리하였습니다.
-        <br />
-        프로젝트에서 처리했던 자세한 내용들은 저의 Project-Blog에서 확인
-        부탁드립니다.
-        <br /> <br />
-        웹 표준, 웹 접근성, javascript, 그리고 react.js 환경에서도 퍼블리싱이
-        가능합니다.
-        <br />
-        가이드 제작뿐만 아니라 타 부서와도 원활한 커뮤니티 또한 가능합니다.
+        <div className="about-sec__cont">
+          안녕하세요, <br />
+          웹퍼블리셔 안상환 입니다. <br />
+          프리랜서로 주로 문제가 발생하는 구축 프로젝트, 운영 프로젝트 위주로
+          교체로 투입하여 프로젝트를 마무리까지 완료하는 전문 웹퍼블리셔입니다.
+          <br /> <br />
+          프리랜서로 참여한 모든 프로젝트들은 모두 기존 웹퍼블리셔들이 처리하지
+          못한 업무들을 교체로 투입하여 업무들을 처리하였습니다.
+          <br />
+          프로젝트에서 처리했던 자세한 내용들은 저의 Project-Blog에서 확인
+          부탁드립니다.
+          <br /> <br />
+          웹 표준, 웹 접근성, javascript, 그리고 react.js 환경에서도 퍼블리싱이
+          가능합니다.
+          <br />
+          가이드 제작뿐만 아니라 타 부서와도 원활한 커뮤니티 또한 가능합니다.
+        </div>
       </section>
 
       <section className="about-sec">
