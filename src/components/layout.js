@@ -26,10 +26,14 @@ const Layout = ({ pageTitle, children, pageClassName }) => {
             <nav className="sanghwan-portfolio-nav">
               <ul className="sanghwan-portfolio-nav__ul">
                 <li>
-                  <Link to="/about">About</Link>
+                  <Link to="/about" activeClassName="active">
+                    About
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/project-blog">Project-Blog</Link>
+                  <Link to="/project-blog" activeClassName="active">
+                    Project-Blog
+                  </Link>
                 </li>
               </ul>
             </nav>
