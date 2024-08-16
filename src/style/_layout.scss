@@ -80,6 +80,10 @@ body {
     a {
       display: block;
       padding: 16px 10px 12px;
+      &.active {
+        color: #edb728;
+        font-weight: bold;
+      }
     }
   }
 }
