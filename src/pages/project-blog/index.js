@@ -31,7 +31,7 @@ const BlogPage = ({ data }) => {
                   {node.frontmatter.date} - {node.frontmatter.enddate}
                 </p>
                 <p className="project-list__skill">
-                  <span className="project-list__conts__tit">skill:</span>{" "}
+                  <span className="project-list__conts__tit">SKILL:</span>{" "}
                   {node.frontmatter.skill}
                 </p>
               </div>
