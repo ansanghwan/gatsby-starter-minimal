@@ -1,14 +1,7 @@
-// #___gatsby {
-//   height: 100%;
-//   overflow: auto;
-// }
-body {
-  background: #000;
-}
 .sanghwan-portfolio {
   position: relative;
+  min-height: 100vh;
   width: 100%;
-  background: #000;
   color: #fff;
 }
 .eng-text {
@@ -16,19 +9,15 @@ body {
 }
 .sanghwan-portfolio-header {
   position: sticky;
-  height: 64px;
   top: 0;
   left: 0;
   width: 100%;
-  background: #000;
   z-index: 1000;
   border-bottom: 1px solid gray;
   color: #fff;
-  font-family: "Roboto", sans-serif;
   a {
     color: inherit;
     text-decoration: none;
-    font-weight: 700;
   }
 }
 .sanghwan-portfolio-header__inner {
@@ -37,11 +26,24 @@ body {
   flex-wrap: wrap;
   align-items: center;
   width: 100%;
-  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(41, 19, 19, 0.15);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+  }
 }
 .sanghwan-portfolio-header__left {
+  position: relative;
+  z-index: 1;
   margin-right: auto;
   > a {
     padding: 16px 0 12px;
@@ -65,12 +67,14 @@ body {
   background: url(../images/bg_home.jpg) no-repeat 50% 50% / cover;
 }
 .sanghwan-portfolio-header__right {
+  position: relative;
+  z-index: 1;
   margin-left: auto;
 }
 .sanghwan-portfolio-nav__ul {
   > li {
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     &:last-child {
       a {
@@ -87,11 +91,10 @@ body {
     }
   }
 }
-.sanghwan-portfolio-body {
-}
+
 .page-title {
   margin-bottom: 36px;
-  font-size: calc(47px + (61 - 47) * ((100vw - 280px) / (575 - 280)));
+  font-size: calc(42px + (52 - 42) * ((100vw - 280px) / (575 - 280)));
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -1px;
@@ -99,9 +102,9 @@ body {
 }
 .sanghwan-portfolio-body__inner {
   position: relative;
-  // max-width: 1400px;
+  //
   margin: 0 auto;
-  padding: 60px 24px 0;
+  padding: 44px 24px 0;
   width: 100%;
   h1:empty {
     display: none;
@@ -114,9 +117,6 @@ body {
   }
 }
 @media (min-width: $breakpoint-sm) {
-  .sanghwan-portfolio-body__inner {
-    padding-top: 120px;
-  }
   .page-title {
     margin-bottom: 66px;
   }
@@ -125,11 +125,7 @@ body {
   .page-title {
     margin-bottom: 96px;
   }
-  .sanghwan-portfolio-header__left {
-    > a {
-      padding: 20px 0;
-    }
-  }
+
   .sanghwan-portfolio-nav__ul {
     > li {
       a {
@@ -143,12 +139,12 @@ body {
     margin-right: 0px;
   }
   .nav-link-text {
-    font-size: 26px;
-    letter-spacing: 8px;
+    font-size: 24px;
+    letter-spacing: -1px;
   }
   .sanghwan-portfolio-nav__ul {
     > li {
-      font-size: 20px;
+      font-size: 17px;
     }
   }
 }
@@ -157,19 +153,17 @@ body {
   .page-title {
     font-size: 98px;
   }
-  .nav-link-text {
-    font-size: 32px;
-  }
-
-  .sanghwan-portfolio-nav__ul > li {
-    font-size: 26px;
-    a {
-      padding: 20px 24px;
-    }
-  }
 }
-@media (min-width: $breakpoint-xl) {
+@media (min-width: $breakpoint-xxl) {
+  .page-title {
+    font-size: 104px;
+  }
   .sanghwan-portfolio-header {
-    height: 90px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .sanghwan-portfolio-body__inner {
+    max-width: 1400px;
+    margin: 0 auto;
   }
 }
