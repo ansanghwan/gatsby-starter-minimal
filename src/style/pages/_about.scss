@@ -1,11 +1,31 @@
 .sanghwan-portfolio--about {
   padding-bottom: 60px;
   .page-title {
-    text-align: center;
     font-family: "Roboto", sans-serif;
     position: relative;
     overflow: hidden;
-    > span {
+    font-weight: 600;
+    word-break: break-word;
+    &__about {
+      color: transparent;
+      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.75);
+      /* 모바일~PC 반응형 크기 */
+      // font-size: clamp(2.7rem, 8vw, 6rem);
+      // letter-spacing: -0.09rem;
+      line-height: 1;
+      margin: 0 0 0.6rem;
+    }
+    &__about-desc {
+      margin-top: 0;
+      font-size: clamp(1.1rem, 4.2vw, 3rem);
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+      margin: 0.8rem 0 1.6rem;
+      word-break: keep-all; /* 단어 중간 분리 방지 */
+      font-weight: 400;
+      max-width: 28ch;
+    }
+    & > span {
       display: block;
       position: relative;
       transform-origin: 0% 0%;
@@ -15,58 +35,76 @@
     }
   }
 
-  .me-profile {
-    overflow: hidden;
-    align-items: center;
-    margin-bottom: 70px;
-    text-align: center;
+  .sec-tit {
+    font-weight: 700;
   }
+  .my-picture {
+    width: 70%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  // .me-profile {
+  //   overflow: hidden;
+  //   align-items: center;
+  //   margin-bottom: 70px;
+  //   text-align: center;
+  // }
 
-  .me-profile__me {
-    position: relative;
-    text-align: center;
-    display: inline-block;
-    width: 60%;
-    border-radius: 8px;
-    overflow: hidden;
-    img {
-      display: inline-block;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      animation: about-me-ani 9s infinite 0.3s;
+  // .me-profile__me {
+  //   position: relative;
+  //   text-align: center;
+  //   display: inline-block;
+  //   width: 60%;
+  //   border-radius: 8px;
+  //   overflow: hidden;
+  //   img {
+  //     display: inline-block;
+  //     object-fit: cover;
+  //     width: 100%;
+  //     height: 100%;
+  //     animation: about-me-ani 9s infinite 0.3s;
+  //   }
+  // }
+  // .me-profile__profile {
+  //   padding-left: 0;
+  //   color: #fff;
+  //   // font-size: 0.9375rem;
+  //   letter-spacing: -1px;
+  //   font-family: "Roboto", sans-serif;
+  //   > p:not(:first-child) {
+  //     margin-top: 0.25rem;
+  //   }
+  //   .p-tit {
+  //     font-family: "Roboto", sans-serif;
+  //   }
+  //   a {
+  //     font-size: inherit;
+  //     display: inline-block;
+  //     white-space: nowrap;
+  //     color: inherit;
+  //   }
+  // }
+  // .me-profile__name {
+  //   color: #fff;
+  //   font-size: 18px;
+  // }
+  // .me-profile__git {
+  //   a {
+  //     width: 78%;
+  //     white-space: nowrap;
+  //     overflow: hidden;
+  //     text-overflow: ellipsis;
+  //     vertical-align: middle;
+  //   }
+  // }
+
+  .career-list {
+    > li:not(:first-child) {
+      margin-top: 10px;
     }
-  }
-  .me-profile__profile {
-    padding-left: 0;
-    color: #fff;
-    // font-size: 0.9375rem;
-    letter-spacing: -1px;
-    font-family: "Roboto", sans-serif;
-    > p:not(:first-child) {
-      margin-top: 0.25rem;
-    }
-    .p-tit {
-      font-family: "Roboto", sans-serif;
-    }
-    a {
-      font-size: inherit;
-      display: inline-block;
-      white-space: nowrap;
-      color: inherit;
-    }
-  }
-  .me-profile__name {
-    color: #fff;
-    font-size: 18px;
-  }
-  .me-profile__git {
-    a {
-      width: 78%;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      vertical-align: middle;
+    &__date {
+      font-size: 14px;
+      color: #949292;
     }
   }
   .about-sec {
@@ -107,61 +145,113 @@
       }
     }
   }
-}
+  .about-sec.about-sec--hire {
+    margin-top: 0;
+    // border-top: 1px solid #808080;
+    padding-top: 32px;
+  }
+  .hire-benefits {
+    margin-top: 22px;
+    &__tit {
+      font-size: inherit;
+      font-weight: 500;
+    }
 
+    &__list > li {
+      font-size: 15px;
+      color: #949292;
+    }
+    &__group {
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
+    }
+  }
+}
+@media (min-width: $breakpoint-sm) {
+  .sanghwan-portfolio--about {
+    .my-picture {
+      width: 50%;
+      margin-bottom: 40px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .page-title {
+      &__about-desc {
+        line-height: 1.1;
+        max-width: 30ch;
+      }
+    }
+  }
+}
 @media (min-width: $breakpoint-md) {
   .sanghwan-portfolio--about {
-    .me-profile__me {
-      text-align: center;
-      width: 340px;
+    .page-title {
+      // &__about-desc {
+      //   margin-top: 0;
+      //   font-size: 22px;
+      //   font-weight: 600;
+      // }
     }
-    .about-sec {
-      max-width: 764px;
-      margin: 0 auto;
-      // font-size: 18px;
+    .career-list__tit {
+      font-size: 20px;
     }
-    .about-sec__tit {
-      font-size: 44px;
+
+    .career-list__date {
+      font-size: 16px;
     }
-    .strong-point-list {
-      > li {
-        em {
-          font-size: 16px;
-        }
+    .about-sec--profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      .my-picture {
+        margin: 0;
+        width: 46.4%;
+      }
+      .my-profile {
+        flex: 1;
+        padding-left: 6.6%;
       }
     }
   }
 }
 @media (min-width: $breakpoint-lg) {
   .sanghwan-portfolio--about {
+    .page-title {
+      // &__about-desc {
+      //   margin-top: 0;
+      //   font-size: 24px;
+      // }
+    }
+    .about-sec--profile {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
+      .my-picture {
+        max-width: 520px;
+      }
+      .my-profile {
+        padding-left: 40px;
+      }
+    }
     .about-sec {
       font-size: 20px;
       line-height: 34px;
       + .about-sec {
         margin-top: 60px;
       }
-      .me-profile__right {
-        .me-profile__name {
-          margin-bottom: 20px;
-        }
-        p:not(.me-profile__name) {
-          font-size: 19px;
-          margin-top: 0;
-          color: #c7c7c7;
-          font-weight: 300;
-        }
-      }
+
       &__tit {
         font-size: 50px;
         font-weight: 700;
         letter-spacing: -1px;
       }
-      .strong-point-list > li,
-      &__cont {
-        font-size: 22px;
-        line-height: 32px;
-        font-weight: 400;
-      }
+    }
+    .hire-benefits__list > li,
+    .accordion__detail-list {
+      font-size: 18px;
     }
   }
 }

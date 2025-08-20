@@ -120,7 +120,7 @@
     padding-left: 10px;
     &__inner {
       position: relative;
-      max-width: 364px;
+      // max-width: 364px;
       margin: 0 auto;
       &::after {
         content: "";
@@ -183,13 +183,13 @@
 @media (min-width: $breakpoint-xl) {
   .ash-character {
     padding-left: 0;
-    flex-basis: 46%;
+    flex-basis: 32%;
     &__img-wrap {
       border-width: 6px;
     }
-    &__inner {
-      max-width: 450px;
-    }
+    // &__inner {
+    //   max-width: 450px;
+    // }
   }
   .ash-hello > p {
     line-height: 1.7;
