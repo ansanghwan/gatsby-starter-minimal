@@ -90,5 +90,12 @@ const IndexPage = () => {
   );
 };
 
-export const Head = () => <Seo title="Home Page" />;
+export const Head = () => (
+  <Seo
+    title="홈"
+    description="Sanghwan's Web Portfolio"
+    image="https://sanghwan-portfolio.netlify.app/images/ansanghwan_character.png"
+    url="https://sanghwan-portfolio.netlify.app/"
+  />
+);
 export default IndexPage;
