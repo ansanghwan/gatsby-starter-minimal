@@ -106,7 +106,7 @@ const AboutPage = () => {
               <p className="career-list__tit">
                 Web Publisher / Project Lead (프리랜서)
               </p>
-              <p className="career-list__date">2014년 10월 - 2025년 10월</p>
+              <p className="career-list__date">2014년 10월 - 2024년 10월</p>
             </li>
 
             <li>
