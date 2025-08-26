@@ -53,9 +53,9 @@
 .nav-link-text {
   display: inline-block;
   vertical-align: middle;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
 }
 .ico-home {
   display: inline-block;
@@ -122,6 +122,9 @@
   .page-title {
     margin-bottom: 66px;
   }
+  .nav-link-text {
+    font-size: 18px;
+  }
 }
 @media (min-width: $breakpoint-md) {
   .page-title {
@@ -142,7 +145,6 @@
   }
   .nav-link-text {
     font-size: 24px;
-    letter-spacing: -1px;
   }
   .sanghwan-portfolio-nav__ul {
     > li {

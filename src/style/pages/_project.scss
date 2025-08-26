@@ -3,7 +3,6 @@
   .page-title {
     position: relative;
     overflow: hidden;
-    text-align: center;
     word-break: keep-all;
     > span {
       display: block;
@@ -27,6 +26,7 @@
   }
 
   .project-detail__cont {
+    padding-top: 34px;
     position: relative;
     opacity: 0;
     right: 0;
@@ -114,7 +114,7 @@
   }
   .project-detail__img {
     position: relative;
-    padding-top: 16px;
+    padding-top: 0;
     width: 45%;
     max-width: 510px;
     > .gatsby-image-wrapper {
@@ -135,6 +135,7 @@
     .project-detail__cont {
       word-break: keep-all;
       max-width: 640px;
+      padding-top: 0;
     }
     .badge-wrap {
       margin-bottom: 14px;
