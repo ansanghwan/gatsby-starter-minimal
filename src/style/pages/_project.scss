@@ -33,10 +33,22 @@
     transform: translateX(60%);
     animation: mdx-cont-ani 3.7s forwards 1s;
 
-    ul {
-      padding-left: 20px;
+    > ul {
+      // padding-left: 20px;
       > li {
         margin-bottom: 24px;
+        strong {
+          font-weight: normal;
+          color: #fff;
+          background: #3949ab;
+        }
+        ul {
+          list-style: circle;
+          margin-left: 20px;
+          > li {
+            margin-bottom: 12px;
+          }
+        }
       }
     }
     ol {
@@ -164,18 +176,7 @@
 
         > li {
           position: relative;
-          padding-left: 26px;
           font-size: 20px;
-          &:after {
-            content: "";
-            position: absolute;
-            top: 16px;
-            left: 0;
-            width: 8px;
-            height: 8px;
-            background: #fff;
-            border-radius: 100%;
-          }
         }
       }
     }
