@@ -3,12 +3,16 @@
  */
 module.exports = {
   siteMetadata: {
-    title: "ASH",
+    title: `Sanghwan Portfolio`,
+    description: `10년 경력 웹 퍼블리셔 & Web UI Developer 포트폴리오`,
+    siteUrl: `https://sanghwan-portfolio.netlify.app`,
   },
   plugins: [
     "gatsby-plugin-sass",
     "gatsby-plugin-image",
     "gatsby-plugin-sharp",
+    `gatsby-plugin-react-helmet`,
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
