@@ -2,17 +2,23 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
+import TitleFxErase from "../components/TitleFxErase";
+import TitleNameFx from "../components/TitleNameFx";
+
+import HomeBodyFxScroll from "../components/HomeBodyFxScroll";
+
 const IndexPage = () => {
   return (
     <Layout
       pageTitle={
         <>
           <p className="page-title__role">
-            <span className="stroke">Web UI</span>{" "}
-            <span className="stroke">Developer</span>
+            <span className="stroke">Web UI Developer</span>{" "}
           </p>
 
-          <p className="page-title__name">SANGHWAN AN</p>
+          <p className="page-title__name">
+            <span className="my-name">SANGHWAN AN</span>
+          </p>
         </>
       }
       pageClassName="sanghwan-portfolio--home"
@@ -86,6 +92,9 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
+      <TitleFxErase />
+      <TitleNameFx />
+      <HomeBodyFxScroll />
     </Layout>
   );
 };
