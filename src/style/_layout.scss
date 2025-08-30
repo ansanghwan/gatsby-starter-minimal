@@ -118,6 +118,20 @@
     font-weight: 400;
   }
 }
+
+footer {
+  padding-top: 40px;
+}
+.footer-inner {
+  padding: 0 24px;
+
+  a {
+    color: #fff;
+    &:active {
+      color: #fff;
+    }
+  }
+}
 @media (min-width: $breakpoint-sm) {
   .page-title {
     margin-bottom: 66px;
@@ -167,6 +181,10 @@
     margin: 0 auto;
   }
   .sanghwan-portfolio-body__inner {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  .footer-inner {
     max-width: 1400px;
     margin: 0 auto;
   }
