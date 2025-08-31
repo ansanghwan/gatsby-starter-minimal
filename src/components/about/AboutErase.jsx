@@ -115,12 +115,13 @@ export default function TitleFxSweep() {
       },
       "-=0" // 타이틀 마무리 0.5초 전에 겹쳐 시작
     );
-
+    tl.call(() => ScrollTrigger.refresh());
     gsap.from(".about-sec--profile .career-list li", {
       scrollTrigger: {
         trigger: ".about-sec--profile",
         start: "top 70%",
         toggleActions: "play none none none",
+        once: true,
       },
       y: 30,
       opacity: 0,
@@ -135,6 +136,7 @@ export default function TitleFxSweep() {
         trigger: ".about-sec--pros",
         start: "top 70%",
         toggleActions: "play none none none",
+        once: true,
       },
       y: 30,
       opacity: 0,
@@ -147,6 +149,7 @@ export default function TitleFxSweep() {
         trigger: ".about-sec--pros",
         start: "top 70%",
         toggleActions: "play none none none",
+        once: true,
       },
       y: 40,
       opacity: 0,
@@ -160,6 +163,7 @@ export default function TitleFxSweep() {
         trigger: ".about-sec--hire",
         start: "top 70%",
         toggleActions: "play none none none",
+        once: true,
       },
       y: 30,
       opacity: 0,
@@ -172,6 +176,7 @@ export default function TitleFxSweep() {
         trigger: ".about-sec--hire",
         start: "top 70%",
         toggleActions: "play none none none",
+        once: true,
       },
       y: 40,
       opacity: 0,
