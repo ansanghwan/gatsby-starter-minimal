@@ -7,13 +7,47 @@
     font-weight: 600;
     word-break: break-word;
     &__about {
-      color: transparent;
-      -webkit-text-stroke: 1px rgba(255, 255, 255, 0.75);
-      /* 모바일~PC 반응형 크기 */
-      // font-size: clamp(2.7rem, 8vw, 6rem);
-      // letter-spacing: -0.09rem;
+      --strokeColor: rgba(255, 255, 255, 0.9);
+      --fillColor: #ffffff;
+
+      /* 하이라이트 바 스타일 */
+      --barColor: #ffffff;
+      --barWidth: 28%; /* 바 너비 */
+      --barX: -12%; /* 시작 위치 (왼쪽 바깥) */
+
       line-height: 1;
       margin: 0 0 0.6rem;
+
+      .stroke {
+        position: relative;
+        display: inline-block;
+        -webkit-text-stroke: 1px var(--strokeColor);
+        color: transparent; /* 채움은 투명 (윤곽선만 보이게) */
+        overflow: hidden; /* 바가 글자 영역 밖으로 안 튀게 */
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: var(--barWidth);
+          height: 100%;
+          background: var(--barColor);
+          transform: translateX(var(--barX)); /* GSAP이 --barX를 움직임 */
+          pointer-events: none;
+          mix-blend-mode: screen; /* 살짝 빛나는 느낌(선택) */
+          opacity: 0; /* 시작은 숨김 → 애니메이션에서 보이게 */
+          will-change: transform, opacity;
+        }
+        .fill {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline-block;
+          color: var(--fillColor);
+          clip-path: inset(0 0 0 0); /* 처음엔 다 보임 */
+          will-change: clip-path, opacity;
+        }
+      }
     }
     &__about-desc {
       margin-top: 0;
@@ -110,14 +144,11 @@
   .about-sec {
     position: relative;
     top: 0;
-    transform: translateY(100px);
     font-weight: 300;
     word-break: keep-all;
-    opacity: 0;
     em {
       font-style: normal;
     }
-    animation: about-cont-ani 3.2s forwards 0.5s;
   }
   .about-sec + .about-sec {
     margin-top: 32px;
@@ -253,54 +284,5 @@
     .accordion__detail-list {
       font-size: 18px;
     }
-  }
-}
-
-@keyframes about-title-ani {
-  0% {
-    opacity: 0;
-    transform: rotate(16deg);
-  }
-  30% {
-    transform: rotate(0);
-  }
-  70% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-}
-
-@keyframes about-cont-ani {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
-  40% {
-    transform: translateY(0);
-  }
-  90% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes about-me-ani {
-  0% {
-    filter: opacity(1);
-  }
-
-  40% {
-    filter: opacity(0.6);
-  }
-  100% {
-    filter: opacity(1);
   }
 }

@@ -2,6 +2,7 @@ import * as React from "react";
 import { useEffect } from "react";
 import Layout from "../components/layout";
 import Accordion from "../components/Accordion";
+import AboutErase from "../components/about/AboutErase";
 
 const AboutPage = () => {
   const items = [
@@ -75,7 +76,9 @@ const AboutPage = () => {
     <Layout
       pageTitle={
         <>
-          <p className="page-title__about">Web Publishing Professional</p>
+          <p className="page-title__about">
+            <span className="stroke">Web Publishing Professional</span>
+          </p>
 
           <p className="page-title__about-desc">
             Delivering Reliable, Accessible, and Modern Web Experiences
@@ -176,6 +179,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      <AboutErase />
     </Layout>
   );
 };
