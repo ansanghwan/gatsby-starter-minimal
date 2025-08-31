@@ -2,10 +2,10 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
-import TitleFxErase from "../components/TitleFxErase";
-import TitleNameFx from "../components/TitleNameFx";
+import TitleFxErase from "../components/home/TitleFxErase";
+import TitleNameFx from "../components/home/TitleNameFx";
 
-import HomeBodyFxScroll from "../components/HomeBodyFxScroll";
+import HomeBodyFxScroll from "../components/home/HomeBodyFxScroll";
 
 const IndexPage = () => {
   return (
