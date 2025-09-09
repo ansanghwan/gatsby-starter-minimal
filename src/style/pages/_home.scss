@@ -174,15 +174,13 @@
     }
   }
   .home-cont {
-    display: flex;
-    flex-wrap: wrap;
     margin-top: 84px;
     align-items: center;
   }
   .ash-greeting {
     margin-bottom: 0;
     font-size: 18px;
-    flex: 1 1 52%;
+    width: 64%;
   }
 
   .ahs-skill-list {
@@ -194,101 +192,91 @@
     }
   }
   .ash-character {
-    flex: 1 1 36%;
-    padding-left: 10px;
+    position: fixed;
+    right: 30px;
+    bottom: 10px;
+    width: clamp(280px, 30%, 440px);
+    // transition: all 0.3s;
     &__inner {
       position: relative;
-      // max-width: 364px;
-      margin: 0 auto;
       &::after {
         content: "";
-        display: block;
-        padding-top: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: 1;
+        background: #fff;
         width: 100%;
+        height: 100%;
+        scale: 5;
+        border-top-left-radius: 100%;
+        transform-origin: bottom right;
+
+        animation: scale-ani 0.5s 0.1s ease-in-out forwards;
       }
     }
     &__img-wrap {
-      overflow: hidden;
-      position: absolute;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      opacity: 0;
+      // animation: bounceY 1.6s ease-in-out infinite,
+      //   fadeIn 4s 0.7s ease-out forwards;
       width: 100%;
-      height: 100%;
-      padding: 24px;
-      border-radius: 100%;
-      border: 4px solid #fff;
-      animation: bounceY 1.6s ease-in-out infinite,
-        fadeIn 4s 0.7s ease-out forwards;
+      overflow: hidden;
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        padding-top: 100%;
+      }
     }
     &__img {
       overflow: hidden;
-      position: relative;
-      display: block;
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-end;
       width: 100%;
       height: 100%;
-      background: #fff url(/images/ansanghwan_character.png) no-repeat 50% 50% /
-        120% auto;
+      transform: translate(10px, 10px);
       border-radius: 100%;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
     }
     img {
-      display: none;
       max-width: none;
+      width: clamp(288px, 103%, 444px);
+      margin: 0 auto 0;
     }
   }
-  @keyframes bounceY {
+
+  @keyframes border-radius-ani {
     0%,
     100% {
-      transform: translateY(0); /* 원래 위치 */
+      border-radius: 25% 10%;
     }
     50% {
-      transform: translateY(-46px); /* 위로 살짝 이동 */
+      border-radius: 10% 25%;
     }
   }
-
+  @keyframes scale-ani {
+    0% {
+    }
+    85% {
+      scale: 1;
+      border-radius: 100% 0 0 0;
+    }
+    100% {
+      scale: 1;
+      border-radius: 100%;
+    }
+  }
   @keyframes fadeIn {
     0% {
-      top: 0;
-      left: 0;
+      transform: translate(10px, 10px);
       opacity: 0;
-      scale: (0.5);
     }
-
-    30% {
-      top: 0;
-      left: 0;
-      opacity: 0;
-      scale: (0.8);
-    }
-    60% {
-      top: -350px;
-      opacity: 0.5;
-      left: -45%;
-      scale: (1.1);
-    }
-    65% {
-      top: -350px;
-      scale: (1.1);
-      left: -45%;
-      opacity: 0.8;
-    }
-    80% {
-      top: 0;
-      left: 0;
-      opacity: 1;
-      scale: (0.9);
-    }
-
-    96% {
-      scale: (0.95);
-    }
-
     100% {
-      top: 0;
-      left: 0;
+      transform: translate(0, 0);
       opacity: 1;
-      scale: (0.95);
     }
   }
 }
