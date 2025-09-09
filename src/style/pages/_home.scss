@@ -42,51 +42,35 @@
     }
   }
 
-  // .stroke {
-  //   color: transparent;
-  //   -webkit-text-stroke: 1px rgba(255, 255, 255, 0.75);
-
-  //   display: inline-block;
-  //   position: relative;
-  //   -webkit-text-stroke: 1px currentColor; /* 윤곽선 */
-  //   color: transparent;
-  //   font-weight: 600;
-  // }
-
-  /* 색상은 필요 시 조정 */
   .page-title__role {
     overflow: hidden;
     --strokeColor: rgba(255, 255, 255, 0.9);
     --fillColor: #ffffff;
 
-    /* 하이라이트 바 스타일 */
     --barColor: #ffffff;
-    --barWidth: 28%; /* 바 너비 */
-    --barX: -12%; /* 시작 위치 (왼쪽 바깥) */
+    --barWidth: 28%;
+    --barX: -12%;
   }
 
-  /* 윤곽선 텍스트(최종에 남는 레이어) */
   .page-title__role .stroke {
     position: relative;
     display: inline-block;
     -webkit-text-stroke: 1px var(--strokeColor);
-    color: transparent; /* 채움은 투명 (윤곽선만 보이게) */
-    overflow: hidden; /* 바가 글자 영역 밖으로 안 튀게 */
+    color: transparent;
+    overflow: hidden;
     letter-spacing: 0;
   }
 
-  /* 채움 레이어(지워질 대상) */
   .page-title__role .stroke .fill {
     position: absolute;
     top: 0;
     left: 0;
     display: inline-block;
     color: var(--fillColor);
-    clip-path: inset(0 0 0 0); /* 처음엔 다 보임 */
+    clip-path: inset(0 0 0 0);
     will-change: clip-path, opacity;
   }
 
-  /* 하이라이트 바: 실제로 보이는 직사각형 */
   .page-title__role .stroke::before {
     content: "";
     position: absolute;
@@ -95,10 +79,10 @@
     width: var(--barWidth);
     height: 100%;
     background: var(--barColor);
-    transform: translateX(var(--barX)); /* GSAP이 --barX를 움직임 */
+    transform: translateX(var(--barX));
     pointer-events: none;
-    mix-blend-mode: screen; /* 살짝 빛나는 느낌(선택) */
-    opacity: 0; /* 시작은 숨김 → 애니메이션에서 보이게 */
+    mix-blend-mode: screen;
+    opacity: 0;
     will-change: transform, opacity;
   }
 }
@@ -196,7 +180,6 @@
     right: 30px;
     bottom: 10px;
     width: clamp(280px, 30%, 440px);
-    // transition: all 0.3s;
     &__inner {
       position: relative;
       &::after {
@@ -211,13 +194,10 @@
         scale: 5;
         border-top-left-radius: 100%;
         transform-origin: bottom right;
-
         animation: scale-ani 0.5s 0.1s ease-in-out forwards;
       }
     }
     &__img-wrap {
-      // animation: bounceY 1.6s ease-in-out infinite,
-      //   fadeIn 4s 0.7s ease-out forwards;
       width: 100%;
       overflow: hidden;
       &::after {
