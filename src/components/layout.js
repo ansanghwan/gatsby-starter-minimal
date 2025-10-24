@@ -51,10 +51,6 @@ const Layout = ({ pageTitle, children, pageClassName }) => {
         <div className="footer-inner">
           <ul className="footer-info">
             <li>
-              <strong>Tell :</strong>{" "}
-              <a href="tel:01073672278">010.7367.2278</a>
-            </li>
-            <li>
               <strong>Email :</strong>{" "}
               <a href="mailto:vooo845@gmail.com">vooo845@gmail.com</a>
             </li>
