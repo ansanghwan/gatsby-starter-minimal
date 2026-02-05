@@ -2,101 +2,124 @@ import * as React from "react";
 import Layout from "../components/layout";
 import { StaticImage } from "gatsby-plugin-image";
 import Seo from "../components/seo";
-import TitleFxErase from "../components/home/TitleFxErase";
-import TitleNameFx from "../components/home/TitleNameFx";
-
-import HomeBodyFxScroll from "../components/home/HomeBodyFxScroll";
+import HomeGsap from "../components/home/HomeGsap";
 
 const IndexPage = () => {
   return (
-    <Layout
-      pageTitle={
-        <>
-          <p className="page-title__role">
-            <span className="stroke">Web UI Developer</span>{" "}
-          </p>
-
-          <p className="page-title__name">
-            <span className="my-name">SANGHWAN AN</span>
-          </p>
-        </>
-      }
-      pageClassName="sanghwan-portfolio--home"
-    >
-      {/* <div className="home-me-wrap">
-        <span></span>
-      </div> */}
-      <div className="home-cont">
-        <div className="ash-greeting">
-          <div className="ash-greeting__inner">
-            <div className="ash-hello">
-              <p>
-                안녕하세요, <br />
-                웹퍼블리셔 안상환 입니다.
+    <Layout pageTitle={null} pageClassName="sanghwan-portfolio--home">
+      <div className="home-wrap">
+        <section className="home-hero">
+          <div className="home-hero__profile">
+            <span className="home-hero__avatar">
+              <StaticImage
+                src="../images/ash.png"
+                alt="Sanghwan An"
+                width={64}
+                height={64}
+                quality={90}
+              />
+            </span>
+            <div>
+              <p className="home-hero__name">Sang Hwan An</p>
+              <p className="home-hero__status">
+                <span className="status-dot" aria-hidden="true"></span>
+                협업/채용 문의 환영
               </p>
-              <p>
-                복잡함보다 직관적인 마크업을 지향하며, 누구나 쉽게 이해하고
-                유지보수할 수 있는 코드를 중요하게 생각합니다.
-              </p>
-              <p>
-                불필요한 복잡성을 줄이고, 문제를 만들지 않는 방향으로 구현하는
-                것을 목표로 합니다.
-              </p>
-              <p>실용적인 감각과 꼼꼼함으로 퍼블리싱의 완성도를 높입니다.</p>
-              <p>누구보다 조용히, 그러나 확실하게 팀에 기여하는 사람입니다.</p>
-              {/* <p>
-                한 번 맺은 인연은 오래 지키고, 한 번 맡은 일은 끝까지 책임지는
-                성격입니다.
-              </p> */}
-
-              <p>사람과 일, 어느 쪽이든 진심으로 대하고 싶습니다.</p>
-            </div>
-            <ul className="ahs-skill-list">
-              <li>
-                <span className="skill-highlight">HTML5 / CSS3 / SCSS</span>
-              </li>
-              <li>
-                <span className="skill-highlight">
-                  웹표준 마크업 / 재사용성 중심 마크업
-                </span>
-              </li>
-              <li>
-                <span className="skill-highlight">
-                  JavaScript (UI 중심 스크립트 구현)
-                </span>
-              </li>
-              <li>
-                <span className="skill-highlight">
-                  반응형 웹 / 크로스 브라우징 / 웹 접근성
-                </span>
-              </li>
-              <li>
-                <span className="skill-highlight">
-                  Git을 통한 실무 협업이 가능합니다
-                </span>
-              </li>
-              <li>
-                <span className="skill-highlight">
-                  React 환경에서 UI 마크업과 스타일링에 익숙합니다.
-                </span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="ash-character">
-          <div className="ash-character__inner">
-            <div className="ash-character__img-wrap">
-              <span className="ash-character__img">
-                <img src="/images/ansanghwan_character.png" alt="" />
-              </span>
             </div>
           </div>
-        </div>
+
+          <h2 className="home-hero__headline">
+            Building solid UI,
+            <br />
+            growing into Frontend.
+          </h2>
+          <p className="home-hero__sub">
+            탄탄한 UI를 만들며
+            <br />
+            프론트엔드로 성장하고 있습니다.
+          </p>
+          <div className="home-hero__copy">
+            <p>
+              안녕하세요. 프론트엔드 개발까지 확장을 목표로 하는 웹 퍼블리셔
+              안상환입니다.
+            </p>
+            <p>
+              이 포트폴리오에는 제가 프로젝트에서 수행한 내용과 업무 강점,
+              그리고 제 소개를 담았습니다.
+            </p>
+            <p>
+              업무 스타일과 강점을 살펴보시고 필요하시면 편하게 연락
+              부탁드립니다.
+            </p>
+            <p>
+              저 역시 저를 필요로 하는 곳에서 좋은 파트너와 시너지를 내고
+              싶습니다.
+            </p>
+          </div>
+        </section>
+
+        <section className="home-portfolio">
+          <div className="home-portfolio__head">
+            <div className="home-portfolio__title">
+              <span className="accent-dot" aria-hidden="true"></span>
+              <h3>Portfolio</h3>
+            </div>
+            <a className="btn-outline" href="/project-blog">
+              Full cases
+            </a>
+          </div>
+
+          <div className="portfolio-list">
+            <article className="portfolio-card">
+              <span className="pill">2025</span>
+              <h4>React Micro Projects Portfolio</h4>
+              <p className="portfolio-card__desc">
+                리액트 학습과 실습 결과물을 정리한 미니 프로젝트 모음입니다.
+              </p>
+              <div className="portfolio-card__row">
+                <span className="portfolio-card__dt">Role</span>
+                <span className="portfolio-card__dl">Personal Project</span>
+              </div>
+              <div className="portfolio-card__row">
+                <span className="portfolio-card__dt">tatus</span>
+                <span className="portfolio-card__dl">Ongoing</span>
+              </div>
+              <a
+                className="link-arrow"
+                href="https://sanghwan-mini-project.netlify.app/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View details →
+              </a>
+            </article>
+            <article className="portfolio-card">
+              <span className="pill">2024</span>
+              <h4>현대백화점 Honey / 인천 스마트 면세 구축</h4>
+              <p className="portfolio-card__desc">
+                신규 페이지 구축과 기존 페이지 개선 프로젝트입니다.
+              </p>
+              <div className="portfolio-card__row">
+                <span className="portfolio-card__dt">Role</span>
+                <span className="portfolio-card__dl">Web Publishing PL</span>
+              </div>
+              <div className="portfolio-card__row">
+                <span className="portfolio-card__dt">Period</span>
+                <span className="portfolio-card__dl">2024.05 – 2024.11</span>
+              </div>
+              <a
+                className="link-arrow"
+                href="/project-blog/hddfs-honey-post/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                View details →
+              </a>
+            </article>
+          </div>
+        </section>
       </div>
-      <TitleFxErase />
-      <TitleNameFx />
-      <HomeBodyFxScroll />
+      <HomeGsap />
     </Layout>
   );
 };
