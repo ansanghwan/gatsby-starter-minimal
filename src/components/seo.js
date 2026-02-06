@@ -42,6 +42,12 @@ const Seo = ({ title, description, image, url }) => {
       <meta name="twitter:title" content={metaTitle} />
       <meta name="twitter:description" content={metaDescription} />
       <meta name="twitter:image" content={metaImage} />
+
+      {/* Disable auto-detection */}
+      <meta name="format-detection" content="telephone=no,address=no,email=no" />
+
+      {/* Favicon */}
+      <link rel="icon" href="/images/favicon.ico" />
     </Helmet>
   );
 };

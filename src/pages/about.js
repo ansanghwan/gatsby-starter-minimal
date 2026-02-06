@@ -2,6 +2,7 @@ import * as React from "react";
 import Layout from "../components/layout";
 import Accordion from "../components/Accordion";
 import AboutGsap from "../components/about/AboutGsap";
+import Seo from "../components/seo";
 
 const AboutPage = () => {
   const items = [
@@ -221,6 +222,6 @@ const AboutPage = () => {
   );
 };
 
-export const Head = () => <title>About Me</title>;
+export const Head = () => <Seo title="About Me" />;
 
 export default AboutPage;
