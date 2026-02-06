@@ -42,7 +42,7 @@
   position: relative;
   overflow: hidden;
   height: 0;
-  padding-top: 62%;
+  padding-top: 80%;
   &::after {
     content: "";
     position: absolute;
@@ -89,16 +89,16 @@
   border: 1px solid rgb(255 255 255 / 70%);
   border-radius: 12px;
   padding: 18px 18px 16px;
-  min-height: 200px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 24px rgba(24, 24, 24, 0.08);
 }
 .project-card__title {
   margin: 0 0 12px;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 500;
   letter-spacing: -0.2px;
+  line-height: 1.4;
 }
 .project-card__rows {
   display: grid;
@@ -123,8 +123,12 @@
   .project-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .project-card__media {
+    padding-top: 64%;
+  }
   .project-card__content {
     padding-top: 24px;
+    min-height: 200px;
   }
   .project-card__title {
     font-size: 20px;
