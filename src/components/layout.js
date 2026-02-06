@@ -32,7 +32,14 @@ const Layout = ({ pageTitle, children, pageClassName }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/project-blog" activeClassName="active">
+                  <Link
+                    to="/project-blog"
+                    getProps={({ location }) =>
+                      location.pathname.startsWith("/project-blog")
+                        ? { className: "active" }
+                        : {}
+                    }
+                  >
                     Projects
                   </Link>
                 </li>

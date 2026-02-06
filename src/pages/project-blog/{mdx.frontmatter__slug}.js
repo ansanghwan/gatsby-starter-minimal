@@ -3,12 +3,17 @@ import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout";
 import Seo from "../../components/seo";
+import ProjectGsap from "../../components/project/ProjectGsap";
 
 const BlogPost = ({ data, children }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
     <Layout
-      pageTitle={data.mdx.frontmatter.title}
+      pageTitle={
+        <>
+          <p className="page-title__about-desc">{data.mdx.frontmatter.title}</p>
+        </>
+      }
       pageClassName="sanghwan-portfolio--mdx"
     >
       <div className="project-detail">
@@ -29,6 +34,7 @@ const BlogPost = ({ data, children }) => {
           {children}
         </div>
       </div>
+      <ProjectGsap />
     </Layout>
   );
 };
