@@ -65,7 +65,7 @@ const IndexPage = () => {
               <h3>Portfolio</h3>
             </div>
             <a className="btn-outline" href="/project-blog">
-              Full cases
+              More
             </a>
           </div>
 
