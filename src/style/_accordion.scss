@@ -4,7 +4,7 @@
   list-style: none;
 }
 .accordion > li:not(:first-child) {
-  border-top: 1px solid #605e5e;
+  border-top: 1px solid rgba(31, 31, 31, 0.12);
 }
 .accordion__item {
   overflow: hidden;
@@ -23,7 +23,7 @@
   text-align: left;
   cursor: pointer;
   font-weight: 600;
-  color: #fff;
+  color: #1f1f1f;
 }
 .accordion__button:focus-visible {
   outline: 3px solid #60a5fa;
@@ -40,8 +40,7 @@
 
 .accordion__panel {
   overflow: hidden;
-  // color: #898989;
-  color: #949292;
+  color: rgba(31, 31, 31, 0.7);
   font-size: 15px;
 }
 .accordion__inner {

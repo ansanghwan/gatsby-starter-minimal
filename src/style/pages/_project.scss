@@ -1,51 +1,42 @@
 .sanghwan-portfolio--mdx {
-  padding-bottom: 60px;
-  .page-title {
-    position: relative;
-    overflow: hidden;
+  .page-title__about-desc {
+    font-family: "DM Sans", "DM Sans Placeholder", $font-family-pretendard;
+    font-size: clamp(34px, 5vw, 64px);
+    line-height: 1.1;
+    letter-spacing: -0.6px;
+    margin: 0 0 1.8rem;
     word-break: keep-all;
-    > span {
-      display: block;
-      position: relative;
-      transform-origin: 0% 0%;
-      opacity: 0;
-      transform: rotate(16deg);
-      animation: mdx-title-ani 3.4s forwards;
-    }
+    font-weight: 600;
+    color: #1f1f1f;
+    max-width: 28ch;
   }
   .badge-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px 2px;
-    margin-bottom: 24px;
+    display: none;
   }
   .project-detail__img {
     position: relative;
-    opacity: 0;
-    transform: translateX(-20%);
-    animation: mdx-img-ani 3.7s forwards 1s;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(24, 24, 24, 0.08);
   }
 
   .project-detail__cont {
     padding-top: 24px;
     position: relative;
-    opacity: 0;
-    right: 0;
-    transform: translateX(60%);
-    animation: mdx-cont-ani 3.7s forwards 1s;
 
     > ul {
-      // padding-left: 20px;
+      padding-left: 0;
+      list-style: none;
       > li {
         margin-bottom: 24px;
         strong {
-          font-weight: normal;
-          color: #fff;
-          background: #3949ab;
+          font-weight: 600;
+          color: #1f1f1f;
+          background: none;
         }
         ul {
-          list-style: circle;
-          margin-left: 20px;
+          list-style: disc;
+          margin-left: 18px;
           > li {
             margin-bottom: 12px;
           }
@@ -66,10 +57,10 @@
   }
 
   blockquote {
-    background: #041529;
-    border-left: 0.5rem solid #0e2e54;
+    background: #f6f2ee;
+    border-left: 0.5rem solid #e7d6c8;
     em {
-      color: #959fb5;
+      color: #6b6b6b;
       font-style: normal;
     }
     small {
@@ -86,12 +77,12 @@
     }
   }
   em {
-    color: tan;
+    color: #7a5f4a;
     font-style: normal;
   }
   small {
     position: relative;
-    color: #9e879a;
+    color: #8a7a6e;
     font-weight: none;
     font-size: 13px;
     padding-left: 11px;
@@ -110,14 +101,15 @@
     flex-wrap: wrap;
     align-items: flex-start;
     margin: 0 auto;
-    max-width: 1400px;
+    max-width: 1100px;
     justify-content: center;
+    gap: 36px;
   }
   .project-detail__img {
     position: relative;
     padding-top: 0;
-    width: 45%;
-    max-width: 510px;
+    width: 44%;
+    max-width: 520px;
     > .gatsby-image-wrapper {
       border-radius: 12px;
       overflow: hidden;
@@ -125,12 +117,12 @@
   }
   .project-detail__cont {
     flex: 1;
-    padding-left: 48px;
+    padding-left: 0;
   }
 
   .sanghwan-portfolio--mdx {
     h2 {
-      font-size: 30px;
+      font-size: 26px;
       margin-bottom: 10px;
     }
     .project-detail__cont {
@@ -152,7 +144,7 @@
     max-width: 540px;
   }
   .project-detail__cont {
-    padding-left: 56px;
+    padding-left: 0;
   }
   blockquote {
     font-size: 1rem;
@@ -163,87 +155,23 @@
   }
 
   .sanghwan-portfolio--mdx {
-    padding-bottom: 100px;
     .badge-wrap {
       margin-bottom: 32px;
     }
     h2 {
-      font-size: 38px;
-      margin-bottom: 40px;
+      font-size: 32px;
+      margin-bottom: 24px;
     }
     .project-detail__cont {
       > ul {
-        padding-left: 0;
-        list-style-type: none;
-
         > li {
           position: relative;
-          font-size: 20px;
+          font-size: 18px;
         }
       }
     }
     h3 {
-      font-size: 30px;
+      font-size: 24px;
     }
-  }
-}
-
-@keyframes mdx-title-ani {
-  0% {
-    opacity: 0;
-    transform: rotate(16deg);
-  }
-  42% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  70% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(0);
-  }
-}
-
-@keyframes mdx-img-ani {
-  0% {
-    opacity: 0;
-    transform: translateX(-20%);
-  }
-  42% {
-    transform: translateX(34%);
-  }
-  74% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes mdx-cont-ani {
-  0% {
-    opacity: 0;
-    transform: translateX(60%);
-  }
-  30% {
-    transform: translateX(-10%);
-  }
-  60% {
-  }
-  70% {
-    transform: translateX(0);
-  }
-  90% {
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
   }
 }

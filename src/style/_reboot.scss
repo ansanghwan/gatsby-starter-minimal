@@ -36,13 +36,13 @@ section {
 body {
   padding: 0;
   margin: 0; // 1
-  font-family: $font-family-base;
+  font-family: "DM Sans", "DM Sans Placeholder", $font-family-pretendard;
   font-size: $font-size-base;
   font-weight: $font-weight-base;
   line-height: $line-height-base;
-  color: $body-color;
+  color: #1f1f1f;
   text-align: left; // 3
-  background-color: #000; // 2
+  background-color: rgb(251 252 215 / 40%);
 }
 
 [tabindex="-1"]:focus {
@@ -123,7 +123,7 @@ blockquote {
   border-left: 0.5rem solid #ccc;
   margin: 0;
   padding: 1rem 0.625rem;
-  quotes: "\201C""\201D""\2018""\2019";
+  quotes: "\201C" "\201D" "\2018" "\2019";
   font-size: 0.875rem;
 }
 
@@ -201,7 +201,8 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
+  font-family:
+    monospace, monospace; // Correct the inheritance and scaling of font size in all browsers.
   font-size: 1em; // Correct the odd `em` font sizing in all browsers.
 }
 // stylelint-enable font-family-no-duplicate-names

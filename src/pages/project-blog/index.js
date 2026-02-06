@@ -6,34 +6,56 @@ import Layout from "../../components/layout";
 import Seo from "../../components/seo";
 
 const BlogPage = ({ data }) => {
+  const formatSkills = (skill) => {
+    if (!skill) return "";
+    return skill
+      .replace(/#/g, "")
+      .split(/\s*,\s*/)
+      .filter(Boolean)
+      .join(" · ");
+  };
+
   return (
     <Layout
-      pageTitle="Project Posts"
+      pageTitle={
+        <>
+          <p className="page-title__about-desc">Project Posts</p>
+        </>
+      }
       pageClassName="sanghwan-portfolio--project"
     >
       <ul className="project-list">
         {data.allMdx.nodes.map((node) => (
-          <li key={node.id} className="project-list__item">
+          <li key={node.id} className="project-card">
             <Link
               to={`/project-blog/${node.frontmatter.slug}`}
-              className="project-list__link"
+              className="project-card__link"
             >
-              <span className="project-list__thumbnail">
+              <span className="project-card__media">
                 <GatsbyImage
                   image={getImage(node.frontmatter.hero_image)}
                   alt=""
                 />
               </span>
-              <div className="project-list__conts">
-                <p className="project-list__label">{node.frontmatter.title}</p>
-                <p className="project-list__date">
-                  {/* <span className="project-list__conts__tit">기간:</span>{" "} */}
-                  {node.frontmatter.date} - {node.frontmatter.enddate}
-                </p>
-                <p className="project-list__skill">
-                  <span className="project-list__conts__tit">SKILL:</span>{" "}
-                  {node.frontmatter.skill}
-                </p>
+              <div className="project-card__overlay">
+                <div className="project-card__content">
+                  <h4 className="project-card__title">
+                    {node.frontmatter.title}
+                  </h4>
+                  <div className="project-card__rows">
+                    <div className="project-card__row">
+                      <span>Period</span>
+                      <span>
+                        {node.frontmatter.date} – {node.frontmatter.enddate}
+                      </span>
+                    </div>
+                    <div className="project-card__row">
+                      <span>Skills</span>
+                      <span>{formatSkills(node.frontmatter.skill)}</span>
+                    </div>
+                  </div>
+                  <span className="project-card__cta">View details →</span>
+                </div>
               </div>
             </Link>
           </li>
