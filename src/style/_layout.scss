@@ -30,7 +30,7 @@
   width: 100%;
   margin: 0 auto;
   padding: 16px 24px;
-  max-width: 1100px;
+  max-width: 1200px;
 }
 .sanghwan-portfolio-header__left {
   position: relative;
@@ -58,12 +58,12 @@
   gap: 22px;
   > li {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     a {
       display: block;
       padding: 6px 0;
       &.active {
-        color: #1f1f1f;
+        color: #016fbb;
         font-weight: 600;
       }
     }
@@ -72,11 +72,15 @@
 
 .page-title {
   margin-bottom: 36px;
-  font-size: calc(34px + (42 - 34) * ((100vw - 280px) / (575 - 280)));
+  font-family: "DM Sans", "DM Sans Placeholder", $font-family-pretendard;
+  font-size: clamp(34px, 5vw, 64px);
   line-height: 1.1;
-  font-weight: 700;
-  letter-spacing: -1px;
-  text-transform: none;
+  letter-spacing: -0.6px;
+  margin: 0 0 1.8rem;
+  word-break: keep-all;
+  font-weight: 500;
+  color: #1f1f1f;
+  max-width: 28ch;
   word-break: keep-all;
   word-wrap: break-word;
 }
@@ -104,7 +108,7 @@ footer {
 }
 .footer-inner {
   padding: 0 24px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -170,6 +174,9 @@ footer {
   background: #fff;
   font-size: 14px;
   font-weight: 600;
+  font-family: "DM Sans", "DM Sans Placeholder", $font-family-pretendard;
+  line-height: 1;
+  min-height: 40px;
   &:hover {
     text-decoration: none;
   }
@@ -196,9 +203,6 @@ footer {
   }
 }
 @media (min-width: $breakpoint-md) {
-  .page-title {
-    margin-bottom: 96px;
-  }
   .sanghwan-portfolio-header__inner {
     padding: 20px 32px;
   }
@@ -208,22 +212,16 @@ footer {
 }
 
 @media (min-width: $breakpoint-lg) {
-  .page-title {
-    font-size: 98px;
-  }
 }
 @media (min-width: $breakpoint-xxl) {
-  .page-title {
-    font-size: 104px;
-  }
   .sanghwan-portfolio-header {
     max-width: none;
   }
   .sanghwan-portfolio-body__inner {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
   }
   .footer-inner {
-    max-width: 1100px;
+    max-width: 1200px;
   }
 }

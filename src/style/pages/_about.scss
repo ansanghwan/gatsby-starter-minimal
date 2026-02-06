@@ -1,136 +1,108 @@
 .sanghwan-portfolio--about {
-  padding-bottom: 60px;
-  .page-title {
-    // font-family: "Roboto", sans-serif;
-    position: relative;
-    overflow: hidden;
-    font-weight: 600;
-    word-break: break-word;
-    &__about {
-      --strokeColor: rgba(255, 255, 255, 0.9);
-      --fillColor: #ffffff;
-
-      /* 하이라이트 바 스타일 */
-      --barColor: #ffffff;
-      --barWidth: 28%; /* 바 너비 */
-      --barX: -12%; /* 시작 위치 (왼쪽 바깥) */
-
-      line-height: 1;
-      margin: 0 0 0.6rem;
-
-      .stroke {
-        position: relative;
-        display: inline-block;
-        -webkit-text-stroke: 1px var(--strokeColor);
-        color: transparent; /* 채움은 투명 (윤곽선만 보이게) */
-        overflow: hidden; /* 바가 글자 영역 밖으로 안 튀게 */
-        &::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: var(--barWidth);
-          height: 100%;
-          background: var(--barColor);
-          transform: translateX(var(--barX)); /* GSAP이 --barX를 움직임 */
-          pointer-events: none;
-          mix-blend-mode: screen; /* 살짝 빛나는 느낌(선택) */
-          opacity: 0; /* 시작은 숨김 → 애니메이션에서 보이게 */
-          will-change: transform, opacity;
-        }
-        .fill {
-          position: absolute;
-          top: 0;
-          left: 0;
-          display: inline-block;
-          color: var(--fillColor);
-          clip-path: inset(0 0 0 0); /* 처음엔 다 보임 */
-          will-change: clip-path, opacity;
-        }
-      }
-    }
-    &__about-desc {
-      margin-top: 0;
-      font-size: clamp(1.1rem, 4.2vw, 3rem);
-      line-height: 1.25;
-      letter-spacing: 0.01em;
-      margin: 0.8rem 0 1.6rem;
-      word-break: keep-all; /* 단어 중간 분리 방지 */
-      font-weight: 400;
-      max-width: 28ch;
-    }
-    & > span {
-      display: block;
-      position: relative;
-      transform-origin: 0% 0%;
-      opacity: 0;
-      transform: rotate(16deg);
-      animation: about-title-ani 3.2s forwards;
-    }
-  }
+  // .page-title {
+  //   &__about-desc {
+  //     font-family: "DM Sans", "DM Sans Placeholder", $font-family-pretendard;
+  //     font-size: clamp(34px, 5vw, 64px);
+  //     line-height: 1.1;
+  //     letter-spacing: -0.6px;
+  //     margin: 0 0 1.8rem;
+  //     word-break: keep-all;
+  //     font-weight: 500;
+  //     color: #1f1f1f;
+  //     max-width: 28ch;
+  //   }
+  // }
 
   .sec-tit {
-    font-weight: 700;
+    font-weight: 600;
+    font-size: 24px;
+    letter-spacing: -0.3px;
+  }
+  .about-sec__head {
+    margin-bottom: 42px;
+    width: 100%;
+  }
+  .about-sec__title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    h3 {
+      margin: 0;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: -0.4px;
+      flex: 1;
+      line-height: 1.2;
+    }
   }
   .my-picture {
-    width: 70%;
-    margin: 0 auto;
-    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+    border-radius: 999px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(24, 24, 24, 0.12);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
-  // .me-profile {
-  //   overflow: hidden;
-  //   align-items: center;
-  //   margin-bottom: 70px;
-  //   text-align: center;
-  // }
-
-  // .me-profile__me {
-  //   position: relative;
-  //   text-align: center;
-  //   display: inline-block;
-  //   width: 60%;
-  //   border-radius: 8px;
-  //   overflow: hidden;
-  //   img {
-  //     display: inline-block;
-  //     object-fit: cover;
-  //     width: 100%;
-  //     height: 100%;
-  //     animation: about-me-ani 9s infinite 0.3s;
-  //   }
-  // }
-  // .me-profile__profile {
-  //   padding-left: 0;
-  //   color: #fff;
-  //   // font-size: 0.9375rem;
-  //   letter-spacing: -1px;
-  //   font-family: "Roboto", sans-serif;
-  //   > p:not(:first-child) {
-  //     margin-top: 0.25rem;
-  //   }
-  //   .p-tit {
-  //     font-family: "Roboto", sans-serif;
-  //   }
-  //   a {
-  //     font-size: inherit;
-  //     display: inline-block;
-  //     white-space: nowrap;
-  //     color: inherit;
-  //   }
-  // }
-  // .me-profile__name {
-  //   color: #fff;
-  //   font-size: 18px;
-  // }
-  // .me-profile__git {
-  //   a {
-  //     width: 78%;
-  //     white-space: nowrap;
-  //     overflow: hidden;
-  //     text-overflow: ellipsis;
-  //     vertical-align: middle;
-  //   }
-  // }
+  .about-sec--profile {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .about-profile {
+    display: grid;
+    gap: 20px;
+    align-items: center;
+    flex: 1;
+  }
+  .about-profile__desc {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: -0.2px;
+    max-width: 30ch;
+  }
+  .about-profile__btns {
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .about-profile__note {
+    margin-top: 10px;
+    font-size: 13px;
+    color: rgba(31, 31, 31, 0.6);
+  }
+  .about-skill-badges {
+    margin-top: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .skill-badge {
+    display: inline-flex;
+    align-items: center;
+    min-width: 52px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #2f3d4a;
+    background: #eaf2ff;
+    border: 1px solid rgba(168, 192, 228, 0.7);
+    justify-content: center;
+  }
+  .about-intro {
+    margin-top: 20px;
+    font-size: 16px;
+    color: rgba(31, 31, 31, 0.7);
+    p + p {
+      margin-top: 14px;
+    }
+  }
 
   .career-list {
     > li:not(:first-child) {
@@ -138,13 +110,40 @@
     }
     &__date {
       font-size: 14px;
-      color: #949292;
+      color: rgba(31, 31, 31, 0.6);
     }
+  }
+
+  .experience-list {
+    display: grid;
+    gap: 18px;
+    margin: 0;
+    padding: 0;
+  }
+  .experience-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(31, 31, 31, 0.12);
+    &:first-child {
+      padding-top: 6px;
+    }
+  }
+  .experience-item__role {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+  }
+  .experience-item__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
   }
   .about-sec {
     position: relative;
     top: 0;
-    font-weight: 300;
+    font-weight: 400;
     word-break: keep-all;
     em {
       font-style: normal;
@@ -154,11 +153,10 @@
     margin-top: 32px;
   }
   .about-sec__tit {
-    font-family: "Roboto", sans-serif;
     margin-bottom: 32px;
-    font-size: 30px;
-    font-weight: 500;
-    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    color: #1f1f1f;
     text-transform: uppercase;
   }
   .closing-ment {
@@ -185,12 +183,12 @@
     margin-top: 22px;
     &__tit {
       font-size: inherit;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     &__list > li {
       font-size: 15px;
-      color: #949292;
+      color: rgba(31, 31, 31, 0.7);
     }
     &__group {
       &:not(:first-child) {
@@ -202,12 +200,8 @@
 @media (min-width: $breakpoint-sm) {
   .sanghwan-portfolio--about {
     .my-picture {
-      width: 50%;
-      margin-bottom: 40px;
-      img {
-        width: 100%;
-        object-fit: cover;
-      }
+      width: 140px;
+      height: 140px;
     }
     .page-title {
       &__about-desc {
@@ -215,16 +209,22 @@
         max-width: 30ch;
       }
     }
+    .about-profile__desc {
+      padding-top: 10px;
+      font-size: 20px;
+    }
   }
 }
 @media (min-width: $breakpoint-md) {
   .sanghwan-portfolio--about {
-    .page-title {
-      // &__about-desc {
-      //   margin-top: 0;
-      //   font-size: 22px;
-      //   font-weight: 600;
-      // }
+    .about-profile {
+      grid-template-columns: auto 1fr;
+      gap: 32px;
+    }
+    .about-profile__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
     .career-list__tit {
       font-size: 20px;
@@ -233,39 +233,21 @@
     .career-list__date {
       font-size: 16px;
     }
-    .about-sec--profile {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      .my-picture {
-        margin: 0;
-        width: 46.4%;
-      }
-      .my-profile {
-        flex: 1;
-        padding-left: 6.6%;
-      }
+
+    .experience-item {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .experience-item__meta {
+      justify-content: flex-end;
     }
   }
 }
 @media (min-width: $breakpoint-lg) {
   .sanghwan-portfolio--about {
-    .page-title {
-      // &__about-desc {
-      //   margin-top: 0;
-      //   font-size: 24px;
-      // }
-    }
-    .about-sec--profile {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-end;
-      .my-picture {
-        max-width: 520px;
-      }
-      .my-profile {
-        padding-left: 40px;
-      }
+    .about-sec__title h3 {
+      font-size: 36px;
     }
     .about-sec {
       font-size: 20px;
@@ -275,11 +257,23 @@
       }
 
       &__tit {
-        font-size: 50px;
-        font-weight: 700;
-        letter-spacing: -1px;
+        font-size: 40px;
+        font-weight: 500;
+        letter-spacing: -0.6px;
       }
     }
+    .about-intro {
+      width: 46%;
+      margin-top: 0;
+      font-size: 17px;
+      p {
+        line-height: 1.5;
+      }
+      p + p {
+        margin-top: 14px;
+      }
+    }
+
     .hire-benefits__list > li,
     .accordion__detail-list {
       font-size: 18px;

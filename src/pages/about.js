@@ -1,37 +1,31 @@
 import * as React from "react";
-import { useEffect } from "react";
 import Layout from "../components/layout";
 import Accordion from "../components/Accordion";
-import AboutErase from "../components/about/AboutErase";
+import AboutGsap from "../components/about/AboutGsap";
 
 const AboutPage = () => {
   const items = [
     {
-      id: "adapt",
-      title: "프로젝트 긴급 투입 & 빠른 적응",
+      id: "benefit-cost",
+      title: "퍼블리싱 외주 비용 절감",
       content: (
         <ul className="accordion__detail-list">
-          <li>철수/이동 공백 상황에서도 즉시 투입</li>
-          <li>
-            <strong>사례:</strong> 통신사 T로밍 접근성, 금융권 3차 오픈, 보험사
-            안정화, 휴넷·한국일보 운영
-          </li>
+          <li>HTML/CSS/JS, React 퍼블리싱 직접 수행</li>
+          <li>웹 접근성, 신규 페이지 제작, 퍼블리싱 가이드 제공</li>
         </ul>
       ),
     },
     {
-      id: "ops",
-      title: "운영 및 유지보수 경험",
+      id: "benefit-stability",
+      title: "프로젝트 안정성과 일정 관리",
       content: (
         <ul className="accordion__detail-list">
-          <li>이벤트/뉴스레터/어드민 가이드 등 운영 요청 신속·정확</li>
-          <li>
-            <strong>사례:</strong> 한국일보(주제판·창간특집·공모전), 휴넷 운영,
-            보험사 안정화·신규
-          </li>
+          <li>위기 상황·중간 투입 프로젝트 다수 완수</li>
+          <li>일정 차질 없이 안정적으로 오픈까지 이끕니다.</li>
         </ul>
       ),
     },
+
     {
       id: "rwd",
       title: "반응형 웹 전문 경험",
@@ -48,25 +42,25 @@ const AboutPage = () => {
       ),
     },
     {
-      id: "skill",
+      id: "guide",
       title: "퍼블리싱 가이드·협업 체계",
       content: (
         <ul className="accordion__detail-list">
-          <li>HTML/CSS/JS 외 Pug, SCSS, Bootstrap 커스텀, GSAP 적용</li>
+          <li>프로젝트별 퍼블리싱 가이드를 다수 제작 및 정착</li>
           <li>
-            <strong>사례:</strong> LG 멀티샵 Pug 이슈 해결, 포스코 SCSS 커스텀,
-            사이펄리 GSAP
+            중간 투입 시 문제를 빠르게 파악하고 퍼블리싱 선에서 해결 가능한
+            이슈를 정리해 프로젝트 흐름을 매끄럽게 유지
           </li>
         </ul>
       ),
     },
     {
-      id: "pfm",
-      title: "성과 & 평가",
+      id: "benefit-growth",
+      title: "성장 잠재력이 큰 프론트엔드 인재",
       content: (
         <ul className="accordion__detail-list">
-          <li>우수사원 선정 → 괌 포상휴가</li>
-          <li>빠른 적응, 문제 해결, 협업 개선 공로 인정</li>
+          <li>10년 퍼블리셔 경력 + React/GSAP 학습·적용 중</li>
+          <li>Meta Front-End Developer 인증 과정 수강 예정</li>
         </ul>
       ),
     },
@@ -77,10 +71,6 @@ const AboutPage = () => {
       pageTitle={
         <>
           <p className="page-title__about">
-            <span className="stroke">Web Publishing Professional</span>
-          </p>
-
-          <p className="page-title__about-desc">
             Delivering Reliable, Accessible, and Modern Web Experiences
           </p>
         </>
@@ -88,46 +78,134 @@ const AboutPage = () => {
       pageClassName="sanghwan-portfolio--about"
     >
       <section className="about-sec about-sec--profile">
-        {/* <span className="me-profile__img"></span> */}
-        <div className="my-picture">
-          <img src="/images/about_me.jpg" alt="안상환 프로필사진" />
+        <div className="about-sec__head">
+          <div className="about-sec__title">
+            <span className="accent-dot" aria-hidden="true"></span>
+            <h3>Bringing stability to shaky projects.</h3>
+          </div>
         </div>
-        <div className="my-profile">
-          {/* <p className="my-profile__name">안상환</p> */}
-          <h2 className="sec-tit">경력사항</h2>
-          <ul className="career-list">
-            <li>
-              <p className="career-list__tit">
-                가족돌봄(어머니간병)으로 인한 휴식기
-              </p>
-              <p className="career-list__date">
-                <time dateTime="2024-11">2024년 11월</time> ~{" "}
-                <time dateTime="present">현재</time>
-              </p>
-            </li>
-            <li>
-              <p className="career-list__tit">
-                Web Publisher / Project Lead (프리랜서)
-              </p>
-              <p className="career-list__date">2014년 10월 - 2024년 10월</p>
-            </li>
 
-            <li>
-              <p className="career-list__tit">
-                대한민국 육군 부사관 (분대장,TOD조장, 소대장)
-              </p>
-              <p className="career-list__date">2007년 7월 - 2011년 11월</p>
-            </li>
-          </ul>
+        <div className="about-profile">
+          <div className="about-profile__left">
+            <div className="my-picture">
+              <img src="/images/me_picture.jpg" alt="안상환 프로필사진" />
+            </div>
+          </div>
+          <div className="about-profile__right">
+            <div className="about-profile__desc">
+              반응형 퍼블리싱을 기반으로 프론트엔드 역량을 확장해가며,
+              프로젝트를 안정적으로 마무리하는 웹 퍼블리셔입니다.
+            </div>
+            <div className="about-profile__btns">
+              <a
+                className="btn-outline"
+                href="https://www.linkedin.com/in/vooo10"
+                target="_blank"
+                rel="noreferrer"
+              >
+                LinkedIn
+              </a>
+              <a
+                className="btn-outline"
+                href="https://github.com/ansanghwan"
+                target="_blank"
+                rel="noreferrer"
+              >
+                GitHub
+              </a>
+              <a
+                className="btn-outline"
+                href="/ansanghwan_resume.pdf"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Resume (PDF)
+              </a>
+            </div>
+            <p className="about-profile__note">
+              KOSA experience certificate available upon request.
+            </p>
+            <div className="about-skill-badges" aria-label="Core skills">
+              <span className="skill-badge">HTML5</span>
+              <span className="skill-badge">CSS3 / SCSS</span>
+              <span className="skill-badge">JavaScript</span>
+              <span className="skill-badge">React</span>
+              <span className="skill-badge">Accessibility</span>
+              <span className="skill-badge">Responsive UI</span>
+              <span className="skill-badge">Git</span>
+            </div>
+          </div>
         </div>
+        <div className="about-intro">
+          <p>
+            지난 10년간 금융·이커머스·교육·언론 등 다양한 도메인의 웹 프로젝트를
+            진행해왔습니다.
+          </p>
+          <p>
+            특히 기존 인력이 중단했거나 정리되지 않은 상태로 남아 있던 작업을
+            인수해, 해결되지 않은 이슈는 리더와 공유하고 협의를 통해 정리하며
+            최종 결과물까지 책임지고 완성하는 역할을 자주 맡아왔습니다.
+          </p>
+          <p>
+            저를 채용하시면 10년간의 퍼블리싱 경험으로 다져진 빠르고 정확한
+            마크업, HTML/CSS·웹접근성·반응형 설계 전문성을 즉시 활용하실 수
+            있습니다.
+          </p>
+          <p>
+            또한 다양한 디바이스와 환경을 고려한 반응형 퍼블리싱을 꾸준히
+            진행해왔고, 퍼블리싱 리소스와 외주 비용을 줄이며 개발 사이클을
+            단축하는 데 기여할 수 있습니다.
+          </p>
+        </div>
+      </section>
+
+      <section className="about-sec about-sec--experience">
+        <div className="about-sec__head">
+          <div className="about-sec__title">
+            <span className="accent-dot" aria-hidden="true"></span>
+            <h3>Work Experience</h3>
+          </div>
+        </div>
+        <ul className="experience-list">
+          <li className="experience-item">
+            <div className="experience-item__role">
+              가족돌봄(어머니간병)으로 인한 휴식기
+            </div>
+            <div className="experience-item__meta">
+              <span className="pill">Family Care</span>
+              <span className="pill">2024.11 – Present</span>
+            </div>
+          </li>
+          <li className="experience-item">
+            <div className="experience-item__role">
+              Web Publisher / Project Lead (프리랜서)
+            </div>
+            <div className="experience-item__meta">
+              <span className="pill">Freelance</span>
+              <span className="pill">2014.10 – 2024.10</span>
+            </div>
+          </li>
+          <li className="experience-item">
+            <div className="experience-item__role">
+              대한민국 육군 부사관 (분대장,TOD조장, 소대장)
+            </div>
+            <div className="experience-item__meta">
+              <span className="pill">Military</span>
+              <span className="pill">2007.07 – 2011.11</span>
+            </div>
+          </li>
+        </ul>
       </section>
       <section
         className="about-sec about-sec--pros"
         aria-labelledby="pros-heading"
       >
-        <h2 className="sec-tit" id="pros-heading">
-          업무 이점
-        </h2>
+        <div className="about-sec__head">
+          <div className="about-sec__title">
+            <span className="accent-dot" aria-hidden="true"></span>
+            <h3>Benefits</h3>
+          </div>
+        </div>
         <div className="accordion-wrap">
           <Accordion
             items={items}
@@ -138,48 +216,7 @@ const AboutPage = () => {
           />
         </div>
       </section>
-      <section
-        className="about-sec about-sec--hire"
-        aria-labelledby="hire-heading"
-      >
-        <h2 className="sec-tit" id="hire-heading">
-          저를 채용하면 얻을 수 있는 이점
-        </h2>
-
-        <div className="hire-benefits">
-          <div className="hire-benefits__group">
-            <h3 className="hire-benefits__tit">1. 퍼블리싱 외주 비용 절감</h3>
-            <ul className="hire-benefits__list">
-              <li>HTML/CSS/JS, React 퍼블리싱 직접 수행</li>
-              <li>웹 접근성, 신규 페이지 제작, 퍼블리싱 가이드 제공</li>
-            </ul>
-          </div>
-
-          <div className="hire-benefits__group">
-            <h3 className="hire-benefits__tit">
-              2. 프로젝트 안정성과 일정 관리
-            </h3>
-            <ul className="hire-benefits__list">
-              <li>위기 상황·중간 투입 프로젝트 다수 완수</li>
-              <li>일정 차질 없이 안정적으로 오픈까지 이끕니다.</li>
-            </ul>
-          </div>
-
-          <div className="hire-benefits__group">
-            <h3 className="hire-benefits__tit">
-              3. 성장 잠재력이 큰 프론트엔드 인재
-            </h3>
-            <ul className="hire-benefits__list">
-              <li>10년 퍼블리셔 경력 + React/GSAP 학습·적용 중</li>
-              <li>
-                Meta Front-End Developer <strong>인증 과정 수강 예정</strong> →
-                프론트엔드 역량 확장 예정
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <AboutErase />
+      <AboutGsap />
     </Layout>
   );
 };
