@@ -124,7 +124,7 @@ const AboutPage = () => {
               </a>
             </div>
             <p className="about-profile__note">
-              KOSA experience certificate available upon request.
+              요청 시 KOSA 경력 증빙을 제출해 드릴 수 있습니다.
             </p>
             <div className="about-skill-badges" aria-label="Core skills">
               <span className="skill-badge">HTML5</span>

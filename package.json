@@ -15,6 +15,9 @@
     "clean": "gatsby clean"
   },
   "license": "0BSD",
+  "engines": {
+    "node": "22.x"
+  },
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "gatsby": "^5.13.6",
