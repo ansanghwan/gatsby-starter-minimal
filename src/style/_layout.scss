@@ -196,7 +196,7 @@ footer {
 }
 
 .section-header {
-  margin-bottom: 42px;
+  margin-bottom: 38px;
   width: 100%;
 }
 .section-title {
@@ -241,6 +241,9 @@ footer {
 }
 
 @media (min-width: $breakpoint-lg) {
+  .section-header {
+    margin-bottom: 42px;
+  }
   .section-title {
     padding-left: 24px;
     h3 {

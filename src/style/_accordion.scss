@@ -10,19 +10,25 @@
   overflow: hidden;
   list-style: none;
 }
-
+.accordion-wrap {
+  ul > li:first-child {
+    .accordion__button {
+      padding-top: 6px;
+    }
+  }
+}
 .accordion__button {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 14px 6px 14px 0;
+  padding: 22px 6px 22px 0;
   background: none;
   border: 0;
   text-align: left;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 500;
   color: #1f1f1f;
 }
 .accordion__button:focus-visible {

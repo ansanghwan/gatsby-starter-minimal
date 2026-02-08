@@ -83,9 +83,6 @@
   }
 
   .career-list {
-    > li:not(:first-child) {
-      margin-top: 10px;
-    }
     &__date {
       font-size: 14px;
       color: rgba(31, 31, 31, 0.6);
@@ -94,7 +91,6 @@
 
   .experience-list {
     display: grid;
-    gap: 18px;
     margin: 0;
     padding: 0;
   }
@@ -128,7 +124,7 @@
     }
   }
   .about-sec + .about-sec {
-    margin-top: 32px;
+    margin-top: 42px;
   }
   .about-sec__tit {
     margin-bottom: 32px;
@@ -137,42 +133,9 @@
     color: #1f1f1f;
     text-transform: uppercase;
   }
-  .closing-ment {
-    padding-top: 0.5rem;
-    text-align: right;
-  }
-  .strong-point-list {
-    margin-left: 16px;
-    > li {
-      em {
-        font-size: 12px;
-      }
-      &:not(:first-child) {
-        margin-top: 20px;
-      }
-    }
-  }
-  .about-sec.about-sec--hire {
-    margin-top: 0;
-    // border-top: 1px solid #808080;
-    padding-top: 32px;
-  }
-  .hire-benefits {
-    margin-top: 22px;
-    &__tit {
-      font-size: inherit;
-      font-weight: 600;
-    }
 
-    &__list > li {
-      font-size: 15px;
-      color: rgba(31, 31, 31, 0.7);
-    }
-    &__group {
-      &:not(:first-child) {
-        margin-top: 24px;
-      }
-    }
+  .accordion__button {
+    font-size: 20px;
   }
 }
 @media (min-width: $breakpoint-sm) {
