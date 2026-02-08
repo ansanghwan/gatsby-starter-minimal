@@ -61,7 +61,7 @@ const IndexPage = () => {
 
         <section className="home-portfolio">
           <div className="home-portfolio__head">
-            <div className="home-portfolio__title">
+            <div className="section-title">
               <span className="accent-dot" aria-hidden="true"></span>
               <h3>Portfolio</h3>
             </div>

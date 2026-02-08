@@ -194,6 +194,35 @@ footer {
   font-weight: 600;
   box-shadow: 0 12px 30px rgba(241, 166, 127, 0.35);
 }
+
+.section-header {
+  margin-bottom: 42px;
+  width: 100%;
+}
+.section-title {
+  position: relative;
+  padding-left: 20px;
+
+  h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.4px;
+    line-height: 1.1;
+  }
+  .accent-dot {
+    position: absolute;
+    left: 0;
+    top: 0.32em;
+    width: 12px;
+    height: 12px;
+    border-radius: 999px;
+    background: #016fbb;
+    display: inline-block;
+    position: absolute;
+  }
+}
+
 @media (min-width: $breakpoint-sm) {
   .page-title {
     margin-bottom: 66px;
@@ -212,6 +241,15 @@ footer {
 }
 
 @media (min-width: $breakpoint-lg) {
+  .section-title {
+    padding-left: 24px;
+    h3 {
+      font-size: 36px;
+    }
+    .accent-dot {
+      top: 0.72em;
+    }
+  }
 }
 @media (min-width: $breakpoint-xxl) {
   .sanghwan-portfolio-header {

@@ -79,8 +79,8 @@ const AboutPage = () => {
       pageClassName="sanghwan-portfolio--about"
     >
       <section className="about-sec about-sec--profile">
-        <div className="about-sec__head">
-          <div className="about-sec__title">
+        <div className="section-header">
+          <div className="section-title">
             <span className="accent-dot" aria-hidden="true"></span>
             <h3>Bringing stability to shaky projects.</h3>
           </div>
@@ -161,8 +161,8 @@ const AboutPage = () => {
       </section>
 
       <section className="about-sec about-sec--experience">
-        <div className="about-sec__head">
-          <div className="about-sec__title">
+        <div className="section-header">
+          <div className="section-title">
             <span className="accent-dot" aria-hidden="true"></span>
             <h3>Work Experience</h3>
           </div>
@@ -201,8 +201,8 @@ const AboutPage = () => {
         className="about-sec about-sec--pros"
         aria-labelledby="pros-heading"
       >
-        <div className="about-sec__head">
-          <div className="about-sec__title">
+        <div className="section-header">
+          <div className="section-title">
             <span className="accent-dot" aria-hidden="true"></span>
             <h3>Benefits</h3>
           </div>

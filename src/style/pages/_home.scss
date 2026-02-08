@@ -88,25 +88,6 @@
   gap: 16px;
 }
 
-.home-portfolio__title {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  h3 {
-    font-size: 24px;
-    margin: 0;
-    font-weight: 500;
-  }
-}
-
-.accent-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 999px;
-  background: #016fbb;
-  display: inline-block;
-}
-
 .portfolio-list {
   display: grid;
   gap: 20px;
