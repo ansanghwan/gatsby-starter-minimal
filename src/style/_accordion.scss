@@ -31,6 +31,9 @@
   font-weight: 500;
   color: #1f1f1f;
 }
+.accordion__button:focus {
+  outline: none;
+}
 .accordion__button:focus-visible {
   outline: 3px solid #60a5fa;
   outline-offset: 3px;
