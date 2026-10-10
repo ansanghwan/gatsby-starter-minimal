@@ -61,12 +61,27 @@ const AboutPage = () => {
       content: (
         <ul className="accordion__detail-list">
           <li>10년 퍼블리셔 경력 + React/GSAP 학습·적용 중</li>
-          <li>Meta Front-End Developer 인증 과정 수강 예정</li>
+          <li>Meta Front-End Developer 인증 과정 수료</li>
         </ul>
       ),
     },
   ];
 
+  const certifications = [
+    {
+      title: "피그마(Figma)와 AI로 쉽게 배우는 UI 디자인",
+      issuer: "코드잇",
+      date: "2026.04",
+      href: "https://www.codeit.kr/kdc/certificates/Lis4F-HJUs5-7Jyl5-XyWfs",
+    },
+    {
+      title: "Meta Front-End Developer Professional Certificate (v.1)",
+      issuer: "Coursera",
+      date: "2025.10",
+      href: "https://www.credly.com/badges/e3479220-231f-4c9a-aea0-4b80466d5337/linked_in_profile",
+    },
+  ];
+  
   return (
     <Layout
       pageTitle={
@@ -195,6 +210,38 @@ const AboutPage = () => {
               <span className="pill">2007.07 – 2011.11</span>
             </div>
           </li>
+        </ul>
+      </section>
+
+      <section className="about-sec">
+        <div className="section-header">
+          <div className="section-title">
+            <span className="accent-dot" aria-hidden="true"></span>
+            <h3>Certifications &amp; Training</h3>
+          </div>
+        </div>
+        <ul className="experience-list">
+          {certifications.map((item) => (
+            <li key={item.id} className="experience-item">
+              <div className="experience-item__role">
+                <span>{item.title}</span>
+                <div className="experience-item__submeta">
+                  <p className="experience-item__org">{item.issuer}</p>
+                  <span className="experience-item__date">{item.date}</span>
+                </div>
+              </div>
+              <div className="experience-item__meta">
+                <a
+                  className="btn-outline"
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  정보 보기
+                </a>
+              </div>
+            </li>
+          ))}
         </ul>
       </section>
       <section
