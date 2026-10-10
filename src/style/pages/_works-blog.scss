@@ -119,6 +119,44 @@
   font-weight: 500;
   text-align: right;
 }
+
+.project-links {
+  display: flex;
+  gap: 10px;
+  margin: 16px 0 28px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(34, 34, 34, 0.2);
+  color: #1f1f1f;
+  background: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family:
+    "DM Sans",
+    "DM Sans Placeholder",
+    "Pretendard",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  line-height: 1;
+  min-height: 40px;
+}
+
+.project-link:hover {
+  text-decoration: none;
+}
 @media (min-width: $breakpoint-md) {
   .project-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
