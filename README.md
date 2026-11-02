@@ -1,104 +1,25 @@
-<!-- <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# Sanghwan Portfolio
 
-## 🚀 Quick start
+**Frontend / UI Developer Portfolio**
 
-1.  **Create a Gatsby site.**
+11년 이상의 웹 UI 실무 경험과 최근 React·TypeScript 기반 프론트엔드 개발 경험을 정리한 개인 포트폴리오입니다.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+금융·커머스·교육·공공 등 다양한 분야에서 수행한 프로젝트를 소개하고 있으며, 각 프로젝트의 상세 페이지에 **담당 역할, 주요 구현 업무, 문제 해결 경험 및 개발 과정**을 정리했습니다.
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+기존 UI 구축 경험부터 최근 프론트엔드 개발 프로젝트까지 확인하실 수 있습니다.
 
-2.  **Start developing.**
+---
 
-    Navigate into your new site’s directory and start it up.
+### Portfolio
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+**[포트폴리오 사이트 바로가기](https://sanghwan-portfolio.netlify.app/)**
 
-3.  **Open the code and start customizing!**
+---
 
-    Your site is now running at http://localhost:8000!
+### Updates
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+**2026.11**
 
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter) -->
-
-<!-- <p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p> -->
-<h1 align="center">
-  프로젝트 포트폴리오(ver2023) 
-</h1>
-
-Gatsby tutorial 적용
-
-## 🚀 Quick start
-
-0.  **SCSS 를 추가하여 디자인 커스텀**
-
-    기존 스타터에서 SASS를 추가하여 기존 템플릿 디자인을 커스텀 하였습니다.
-
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
-
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
-
-3.  **Open the code and start customizing!**
-
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- 포트폴리오 메인 및 About 페이지 콘텐츠 개선
+- 최근 프론트엔드 프로젝트 추가 및 상세 내용 업데이트
+- README 문서 개편
