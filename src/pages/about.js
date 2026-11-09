@@ -113,7 +113,7 @@ const AboutPage = () => {
       title: "프론트엔드 단기 심화 과정 16기",
       issuer: "코드잇",
       date: "2026.10",
-      // href: "https://www.codeit.kr/kdc/certificates/Lis4F-HJUs5-7Jyl5-XyWfs",
+      href: "https://drive.google.com/file/d/1epSMR3TA6-g8SIH8zq5o5CCFzY6LRWWA/view?usp=drive_link",
     },
     {
       title: "피그마(Figma)와 AI로 쉽게 배우는 UI 디자인",
