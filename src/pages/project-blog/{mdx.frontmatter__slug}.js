@@ -34,7 +34,7 @@ const BlogPost = ({ data, children }) => {
           {children}
         </div>
       </div>
-      <ProjectGsap />
+      <ProjectGsap animationKey={data.mdx.frontmatter.title} />
     </Layout>
   );
 };

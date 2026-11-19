@@ -4,6 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../../components/layout";
 
 import Seo from "../../components/seo";
+import ProjectListGsap from "../../components/project/ProjectListGsap";
 
 const BlogPage = ({ data }) => {
   const formatSkills = (skill) => {
@@ -61,6 +62,7 @@ const BlogPage = ({ data }) => {
           </li>
         ))}
       </ul>
+      <ProjectListGsap />
     </Layout>
   );
 };

@@ -258,3 +258,23 @@
     }
   }
 }
+
+// Hide reveal targets before hydration; reduced motion keeps content visible.
+@media (prefers-reduced-motion: no-preference) {
+  .sanghwan-portfolio--about {
+    .page-title__about,
+    .section-header,
+    .about-profile__left,
+    .about-profile__desc,
+    .about-profile__btns,
+    .about-profile__note,
+    .about-skill-badges,
+    .about-intro p,
+    .experience-item,
+    .accordion__item {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(18px);
+    }
+  }
+}
