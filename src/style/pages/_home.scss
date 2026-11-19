@@ -178,3 +178,28 @@
     padding: 28px;
   }
 }
+
+// Set animation start states before Gatsby hydrates the page.
+@media (prefers-reduced-motion: no-preference) {
+  .sanghwan-portfolio--home {
+    .home-hero__profile,
+    .home-hero__headline,
+    .home-hero__sub,
+    .home-hero__copy p,
+    .portfolio-card {
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    .home-hero__profile {
+      transform: scale(0.9);
+    }
+
+    .home-hero__headline,
+    .home-hero__sub,
+    .home-hero__copy p,
+    .portfolio-card {
+      transform: translateY(18px);
+    }
+  }
+}

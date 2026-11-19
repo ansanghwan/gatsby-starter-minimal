@@ -6,71 +6,69 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeGsap() {
   useEffect(() => {
-    if (typeof window === "undefined") return;
-    const prefersReduced = window.matchMedia(
-      "(prefers-reduced-motion: reduce)",
-    ).matches;
+    const root = document.querySelector(".sanghwan-portfolio--home");
+    if (!root) return;
 
-    const baseDuration = prefersReduced ? 0.8 : 0.9;
-    const baseY = prefersReduced ? 0 : 18;
+    const media = gsap.matchMedia();
+    media.add("(prefers-reduced-motion: no-preference)", () => {
+      // CSS supplies the initial hidden state before hydration.
+      const heroTl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".home-hero",
+          start: "top 80%",
+          toggleActions: "play none none none",
+        },
+      });
 
-    const heroTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".home-hero",
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    });
+      heroTl
+        .to(".home-hero__profile", {
+          autoAlpha: 1,
+          scale: 1,
+          duration: 0.9,
+          ease: "power2.out",
+        })
+        .to(
+          [".home-hero__headline", ".home-hero__sub"],
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.9,
+            ease: "power2.out",
+            stagger: 0.12,
+          },
+          "-=0.4",
+        );
 
-    heroTl
-      .from(".home-hero__profile", {
-        opacity: 0,
-        scale: prefersReduced ? 1 : 0.9,
-        duration: baseDuration,
+      if (root.querySelector(".home-hero__copy p")) {
+        heroTl.to(
+          ".home-hero__copy p",
+          {
+            autoAlpha: 1,
+            y: 0,
+            duration: 0.7,
+            ease: "power2.out",
+            stagger: 0.1,
+          },
+          "-=0.3",
+        );
+      }
+
+      gsap.to(".portfolio-card", {
+        autoAlpha: 1,
+        y: 0,
+        duration: 0.8,
         ease: "power2.out",
-      })
-      .from(
-        [".home-hero__headline", ".home-hero__sub"],
-        {
-          opacity: 0,
-          y: baseY,
-          duration: baseDuration,
-          ease: "power2.out",
-          stagger: prefersReduced ? 0 : 0.12,
+        stagger: 0.15,
+        scrollTrigger: {
+          trigger: ".portfolio-list",
+          start: "top 80%",
+          toggleActions: "play none none none",
         },
-        "-=0.4",
-      )
-      .from(
-        ".home-hero__copy p",
-        {
-          opacity: 0,
-          y: baseY,
-          duration: prefersReduced ? 0.6 : 0.7,
-          ease: "power2.out",
-          stagger: prefersReduced ? 0 : 0.1,
-        },
-        "-=0.3",
-      );
+      });
+    }, root);
 
-    const cards = gsap.utils.toArray(".portfolio-card");
-    const cardsTween = gsap.from(cards, {
-      opacity: 0,
-      y: baseY,
-      duration: prefersReduced ? 0.6 : 0.8,
-      ease: "power2.out",
-      stagger: prefersReduced ? 0 : 0.15,
-      scrollTrigger: {
-        trigger: ".portfolio-list",
-        start: "top 80%",
-        toggleActions: "play none none none",
-      },
-    });
-
-    return () => {
-      heroTl.kill();
-      cardsTween.kill();
-      ScrollTrigger.getAll().forEach((st) => st.kill());
-    };
+    // Revert only this page's animations and ScrollTriggers on navigation.
+    return () => media.revert();
   }, []);
 
   return null;
