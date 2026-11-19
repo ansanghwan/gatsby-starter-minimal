@@ -10,64 +10,61 @@ export default function HomeGsap() {
     if (!root) return;
 
     const media = gsap.matchMedia();
-    media.add("(prefers-reduced-motion: no-preference)", () => {
-      // CSS supplies the initial hidden state before hydration.
-      const heroTl = gsap.timeline({
-        scrollTrigger: {
-          trigger: ".home-hero",
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
+    media.add(
+      {
+        desktop: "(min-width: 992px)", // Matches $breakpoint-lg.
+        mobile: "(max-width: 991.98px)",
+        reducedMotion: "(prefers-reduced-motion: reduce)",
+      },
+      (context) => {
+        // CSS leaves all content visible when reduced motion is requested.
+        if (context.conditions.reducedMotion) return;
 
-      heroTl
-        .to(".home-hero__profile", {
-          autoAlpha: 1,
-          scale: 1,
-          duration: 0.9,
-          ease: "power2.out",
-        })
-        .to(
-          [".home-hero__headline", ".home-hero__sub"],
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.9,
-            ease: "power2.out",
-            stagger: 0.12,
-          },
-          "-=0.4",
+        const profile = root.querySelector(".home-hero__profile");
+        const headline = root.querySelector(".home-hero__headline");
+        const intro = root.querySelectorAll(
+          ".home-hero__sub, .home-hero__copy p",
         );
+        const portfolioHead = root.querySelector(".home-portfolio__head");
+        const cards = root.querySelectorAll(".portfolio-card");
+        const reveal = { autoAlpha: 1, y: 0, duration: 0.7, ease: "power2.out" };
 
-      if (root.querySelector(".home-hero__copy p")) {
-        heroTl.to(
-          ".home-hero__copy p",
-          {
-            autoAlpha: 1,
-            y: 0,
-            duration: 0.7,
-            ease: "power2.out",
-            stagger: 0.1,
-          },
-          "-=0.3",
-        );
-      }
+        if (context.conditions.desktop) {
+          // One timeline prevents the portfolio from overtaking the introduction.
+          const timeline = gsap.timeline();
+          timeline
+            .to(profile, { ...reveal, scale: 1 })
+            .to(headline, reveal);
 
-      gsap.to(".portfolio-card", {
-        autoAlpha: 1,
-        y: 0,
-        duration: 0.8,
-        ease: "power2.out",
-        stagger: 0.15,
-        scrollTrigger: {
-          trigger: ".portfolio-list",
-          start: "top 80%",
-          toggleActions: "play none none none",
-        },
-      });
-    }, root);
+          if (intro.length) {
+            timeline.to(intro, { ...reveal, duration: 0.55, stagger: 0.15 });
+          }
 
-    // Revert only this page's animations and ScrollTriggers on navigation.
+          timeline
+            .to(portfolioHead, reveal)
+            .to(cards, { ...reveal, stagger: 0.15 });
+        } else {
+          // Each element waits for its own viewport entry on smaller screens.
+          const elements = [profile, headline, ...intro, portfolioHead, ...cards];
+          elements.forEach((element) => {
+            if (!element) return;
+            gsap.to(element, {
+              ...reveal,
+              ...(element === profile ? { scale: 1 } : {}),
+              scrollTrigger: {
+                trigger: element,
+                start: "top 85%",
+                toggleActions: "play none none none",
+                once: true,
+              },
+            });
+          });
+        }
+      },
+      root,
+    );
+
+    // MatchMedia reverts the old branch on resize and cleans up on navigation.
     return () => media.revert();
   }, []);
 
